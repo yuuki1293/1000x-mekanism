@@ -1,0 +1,157 @@
+{
+  "name": "cobble",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "fuelTexture": "multiblocked:textures/gui/progress_bar_fuel.png",
+  "recipes": [
+    {
+      "uid": "cobble_1",
+      "duration": 1,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:cobblestone"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "cataryst",
+            "uiName": "cataryst"
+          }
+        ],
+        "fluid": [
+          {
+            "content": {
+              "fluid": "minecraft:lava",
+              "amount": 1000
+            },
+            "chance": 0.0
+          },
+          {
+            "content": {
+              "fluid": "minecraft:water",
+              "amount": 1000
+            },
+            "chance": 0.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:cobblestone"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "cobble_2",
+      "duration": 1,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:bedrockium_ingot"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "cataryst",
+            "uiName": "cataryst"
+          }
+        ],
+        "fluid": [
+          {
+            "content": {
+              "fluid": "minecraft:lava",
+              "amount": 1000
+            },
+            "chance": 0.0
+          },
+          {
+            "content": {
+              "fluid": "minecraft:water",
+              "amount": 1000
+            },
+            "chance": 0.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 64,
+              "ingredient": {
+                "item": "minecraft:cobblestone"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "cobble_3",
+      "duration": 1,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:black_casing"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "cataryst",
+            "uiName": "cataryst"
+          }
+        ],
+        "fluid": [
+          {
+            "content": {
+              "fluid": "minecraft:lava",
+              "amount": 1000
+            },
+            "chance": 0.0
+          },
+          {
+            "content": {
+              "fluid": "mekanism:heavy_water",
+              "amount": 1000
+            },
+            "chance": 0.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 64,
+              "ingredient": {
+                "item": "mek1000:5xcobblestone"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

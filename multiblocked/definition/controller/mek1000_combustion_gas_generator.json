@@ -1,0 +1,174 @@
+{
+  "version": 3,
+  "location": "mek1000:combustion_gas_generator",
+  "traits": {
+    "recipe_progress": {
+      "cIO": 2,
+      "gIO": 2,
+      "mbdIO": 2,
+      "slotName": "progress",
+      "x": 51,
+      "y": 123,
+      "width": 60,
+      "height": 18,
+      "texture": "multiblocked:textures/gui/energy_bar.png",
+      "fillDirection": "LEFT_TO_RIGHT"
+    },
+    "mek_gas": [
+      {
+        "cIO": 2,
+        "gIO": 2,
+        "mIO": 2,
+        "slotName": "gas",
+        "x": 78,
+        "y": 78,
+        "autoIO": true,
+        "tankCapability": 1024000
+      }
+    ]
+  },
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 6.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "harvestLevel": 0,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "baseTexture": "multiblocked:electricity_resistant_reinforced_casing",
+        "frontTexture": "multiblocked:blocks/gregtech_front",
+        "type": "gregtech",
+        "postRenderer": false
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "generator",
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "AAA",
+        "A@A",
+        "AAA"
+      ],
+      [
+        "BBB",
+        "B B",
+        "BBB"
+      ],
+      [
+        "BBB",
+        "B B",
+        "BBB"
+      ],
+      [
+        "AAA",
+        "ADA",
+        "AAA"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "blocks": [
+          {
+            "id": "mekanismgenerators:turbine_casing"
+          }
+        ],
+        "type": "blocks"
+      },
+      "controller": {
+        "location": "mek1000:combustion_gas_generator",
+        "type": "component"
+      },
+      "B": {
+        "blocks": [
+          {
+            "id": "mek1000:reinforced_steel_casing"
+          }
+        ],
+        "type": "blocks"
+      },
+      "C": {
+        "blocks": [
+          {
+            "id": "mek1000:energy_out"
+          }
+        ],
+        "type": "blocks",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "OUT",
+        "slotName": "energy_out"
+      },
+      "D": {
+        "capability": "forge_energy",
+        "type": "capability",
+        "io": "OUT",
+        "slotName": "energy_out"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "D": [
+        "C",
+        "D"
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "version": 3,
+  "location": "mek1000:fusion_energy_input",
+  "traits": {
+    "forge_energy": {
+      "cIO": 0,
+      "gIO": 2,
+      "mbdIO": 0,
+      "slotName": "energy",
+      "x": 55,
+      "y": 108,
+      "width": 60,
+      "height": 18,
+      "texture": "multiblocked:textures/gui/energy_bar.png",
+      "fillDirection": "LEFT_TO_RIGHT",
+      "capacity": 2147483647,
+      "maxReceive": 2147483647,
+      "maxExtract": 2147483647
+    }
+  },
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 6.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "harvestLevel": 0,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "baseTexture": "multiblocked:fusion_casing",
+        "frontTexture": "multiblocked:fusion_energy_input",
+        "backTexture": "multiblocked:fusion_energy_input",
+        "leftTexture": "multiblocked:fusion_energy_input",
+        "rightTexture": "multiblocked:fusion_energy_input",
+        "type": "gregtech",
+        "postRenderer": false
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "canShared": true
+}

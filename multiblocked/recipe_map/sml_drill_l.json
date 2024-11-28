@@ -1,0 +1,1042 @@
+{
+  "name": "sml_drill_l",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "fuelTexture": "multiblocked:textures/gui/progress_bar_fuel.png",
+  "recipes": [
+    {
+      "uid": "certus",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "ae2:quartz_ore"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst",
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "ae2:quartz_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "ae2:quartz_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "ae2:quartz_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 8192,
+              "ingredient": {
+                "item": "ae2:quartz_ore"
+              }
+            },
+            "chance": 0.1
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "coal",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:coal_ore"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst",
+            "uiName": "catalyst"
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "minecraft:coal_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_coal_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "copper",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:copper_ore"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst",
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "minecraft:copper_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_copper_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "diamond",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:diamond_ore"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst",
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "minecraft:diamond_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_diamond_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "emerald",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:emerald_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "minecraft:emerald_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_emerald_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "fluorite",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekanism:fluorite_ore"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst",
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "mekanism:fluorite_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_fluorite_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "gold",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:gold_ore"
+              }
+            },
+            "chance": 0.0,
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "minecraft:gold_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_gold_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "iridium",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "ultimatesolarpanels:iridium_ore"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "ultimatesolarpanels:iridium_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_iridium_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "iron",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:iron_ore"
+              }
+            },
+            "chance": 0.0,
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "minecraft:iron_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_iron_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "lapis",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:lapis_ore"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst",
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "minecraft:lapis_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_lapis_lazuli_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "lead",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekanism:lead_ore"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst",
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "mekanism:lead_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_lead_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "osmium",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekanism:osmium_ore"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst",
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "mekanism:osmium_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_osmium_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "quarts",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:nether_quartz_ore"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst",
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "minecraft:nether_quartz_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_nether_quartz_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "redstone",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:redstone_ore"
+              }
+            },
+            "chance": 0.0,
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "minecraft:redstone_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_redstone_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "tin",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekanism:tin_ore"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst",
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "mekanism:tin_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_tin_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "uranium",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekanism:uranium_ore"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst",
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "mekanism:uranium_ore"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "superores:super_uranium_ore"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    }
+  ]
+}

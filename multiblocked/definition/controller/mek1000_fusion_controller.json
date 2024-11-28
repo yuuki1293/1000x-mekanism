@@ -1,0 +1,294 @@
+{
+  "version": 3,
+  "location": "mek1000:fusion_controller",
+  "ui": "assets/multiblocked/fusion_creative.mbdui",
+  "traits": {
+    "item": [
+      {
+        "cIO": 1,
+        "gIO": 2,
+        "mIO": 1,
+        "slotName": "output",
+        "x": 75,
+        "y": 65,
+        "autoIO": false
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "input_1",
+        "x": 109,
+        "y": 65,
+        "autoIO": false
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "input_0",
+        "x": 39,
+        "y": 65,
+        "autoIO": false
+      }
+    ],
+    "recipe_progress": {
+      "cIO": 2,
+      "gIO": 2,
+      "mbdIO": 2,
+      "slotName": "progress",
+      "x": 39,
+      "y": 125,
+      "width": 100,
+      "height": 18,
+      "texture": "multiblocked:textures/gui/energy_bar.png",
+      "fillDirection": "LEFT_TO_RIGHT"
+    }
+  },
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 6.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "harvestLevel": 3,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "baseTexture": "multiblocked:fusion_casing",
+        "frontTexture": "multiblocked:blocks/gregtech_front",
+        "type": "gregtech",
+        "postRenderer": false
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "fusion",
+  "basePattern": {
+    "structureDir": [
+      "RIGHT",
+      "UP",
+      "FRONT"
+    ],
+    "pattern": [
+      [
+        "               ",
+        "      AAA      ",
+        "               "
+      ],
+      [
+        "      AAA      ",
+        "    AA   AA    ",
+        "      AAA      "
+      ],
+      [
+        "    AA   AA    ",
+        "   A  AAA  A   ",
+        "    AA   AA    "
+      ],
+      [
+        "   A       A   ",
+        "  ACAA   AACA  ",
+        "   A       A   "
+      ],
+      [
+        "  A         A  ",
+        " A A       A A ",
+        "  A         A  "
+      ],
+      [
+        "  A         A  ",
+        " A A       A A ",
+        "  A         A  "
+      ],
+      [
+        " A           A ",
+        "A A         A A",
+        " A           A "
+      ],
+      [
+        " A           A ",
+        "A A         A A",
+        " A           A "
+      ],
+      [
+        " A           A ",
+        "A A         A A",
+        " A           A "
+      ],
+      [
+        "  A         A  ",
+        " A A       A A ",
+        "  A         A  "
+      ],
+      [
+        "  A         A  ",
+        " A A       A A ",
+        "  A         A  "
+      ],
+      [
+        "   A       A   ",
+        "  ACAA   AACA  ",
+        "   A       A   "
+      ],
+      [
+        "    AA   AA    ",
+        "   A  AAA  A   ",
+        "    AA   AA    "
+      ],
+      [
+        "      AAA      ",
+        "    AA   AA    ",
+        "      ABA      "
+      ],
+      [
+        "               ",
+        "      A@A      ",
+        "               "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "blocks": [
+          {
+            "id": "mek1000:fusion_casing"
+          }
+        ],
+        "type": "blocks"
+      },
+      "controller": {
+        "location": "mek1000:fusion_controller",
+        "type": "component"
+      },
+      "B": {
+        "blocks": [
+          {
+            "id": "mek1000:fusion_energy_input"
+          }
+        ],
+        "type": "blocks",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "IN",
+        "slotName": "energy"
+      },
+      "C": {
+        "blocks": [
+          {
+            "id": "mek1000:fusion_coil"
+          }
+        ],
+        "type": "blocks"
+      },
+      "E": {
+        "capability": "forge_energy",
+        "type": "capability",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "IN",
+        "slotName": "energy"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B",
+        "E"
+      ],
+      "C": [
+        "C"
+      ]
+    }
+  }
+}

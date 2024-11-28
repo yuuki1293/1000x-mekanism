@@ -1,0 +1,97 @@
+{
+  "version": 3,
+  "location": "mek1000:fluid_input",
+  "traits": {
+    "fluid": [
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "fluid_0",
+        "x": 59,
+        "y": 59,
+        "autoIO": true,
+        "tC": 1024000,
+        "w": 18,
+        "h": 18,
+        "fillDir": "DOWN_TO_UP"
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "fluid_1",
+        "x": 79,
+        "y": 59,
+        "autoIO": true,
+        "tC": 1024000,
+        "w": 18,
+        "h": 18,
+        "fillDir": "DOWN_TO_UP"
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "fluid_2",
+        "x": 59,
+        "y": 79,
+        "autoIO": true,
+        "tC": 1024000,
+        "w": 18,
+        "h": 18,
+        "fillDir": "DOWN_TO_UP"
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "fluid_3",
+        "x": 79,
+        "y": 79,
+        "autoIO": true,
+        "tC": 1024000,
+        "w": 18,
+        "h": 18,
+        "fillDir": "DOWN_TO_UP"
+      }
+    ]
+  },
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 6.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "harvestLevel": 0,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "mekanism:sps_port",
+          "meta": 1
+        },
+        "type": "blockstate",
+        "postRenderer": true
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "canShared": true
+}

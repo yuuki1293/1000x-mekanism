@@ -1,0 +1,377 @@
+{
+  "version": 3,
+  "location": "mek1000:sml_drill_s",
+  "traits": {},
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 6.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "harvestLevel": 0,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "baseTexture": "multiblocked:wtf_casing",
+        "frontTexture": "multiblocked:blocks/gregtech_front",
+        "type": "gregtech",
+        "postRenderer": false
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "sml_drill_s",
+  "basePattern": {
+    "structureDir": [
+      "BACK",
+      "UP",
+      "RIGHT"
+    ],
+    "pattern": [
+      [
+        "AAA         AAA",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAA         AAA",
+        " A           A ",
+        " AA         AA ",
+        " AA         AA ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAA         AAA",
+        "               ",
+        " A           A ",
+        " AA         AA ",
+        "  AA       AA  ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "  AA       AA  ",
+        "   AA     AA   ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "   AA     AA   ",
+        "    AAAAAAA    ",
+        "       A       ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    AA   AA    ",
+        "     AAAAA     ",
+        "     A   A     ",
+        "               ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    A     A    ",
+        "     AAAAA     ",
+        "      AAA      ",
+        "      AAA      ",
+        "               "
+      ],
+      [
+        "       C       ",
+        "       C       ",
+        "       C       ",
+        "       C       ",
+        "       C       ",
+        "       C       ",
+        "    A  C  A    ",
+        "    AAACAAD    ",
+        "      ACA      ",
+        "      A@A      ",
+        "       G       "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    A     A    ",
+        "     AAAAA     ",
+        "      AAA      ",
+        "      AAA      ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    AA   AA    ",
+        "     AAAAA     ",
+        "     A   A     ",
+        "               ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "   AA     AA   ",
+        "    AAAAAAA    ",
+        "       A       ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "  AA       AA  ",
+        "   AA     AA   ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAA         AAA",
+        "               ",
+        " A           A ",
+        " AA         AA ",
+        "  AA       AA  ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAA         AAA",
+        " A           A ",
+        " AA         AA ",
+        " AA         AA ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAA         AAA",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "blocks": [
+          {
+            "id": "mek1000:uranite_flux_casing"
+          }
+        ],
+        "type": "blocks"
+      },
+      "controller": {
+        "location": "mek1000:sml_drill_s",
+        "type": "component"
+      },
+      "C": {
+        "blocks": [
+          {
+            "id": "ae2:quartz_vibrant_glass"
+          }
+        ],
+        "type": "blocks"
+      },
+      "D": {
+        "blocks": [
+          {
+            "id": "mek1000:imitation_sps_port"
+          }
+        ],
+        "type": "blocks"
+      },
+      "F": {
+        "blocks": [
+          {
+            "id": "ironchest:crystal_chest"
+          }
+        ],
+        "type": "blocks"
+      },
+      "G": {
+        "capability": "item",
+        "type": "capability",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "OUT",
+        "slotName": "output"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "C": [
+        "C"
+      ],
+      "D": [
+        "D"
+      ],
+      "G": [
+        "F",
+        "G"
+      ]
+    }
+  }
+}

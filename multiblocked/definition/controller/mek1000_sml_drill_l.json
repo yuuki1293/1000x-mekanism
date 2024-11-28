@@ -1,0 +1,654 @@
+{
+  "version": 3,
+  "location": "mek1000:sml_drill_l",
+  "traits": {
+    "recipe_progress": {
+      "cIO": 2,
+      "gIO": 2,
+      "mbdIO": 2,
+      "slotName": "progress",
+      "x": 57,
+      "y": 66,
+      "width": 60,
+      "height": 18,
+      "texture": "multiblocked:textures/gui/energy_bar.png",
+      "fillDirection": "LEFT_TO_RIGHT"
+    }
+  },
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 6.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "harvestLevel": 0,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "baseTexture": "multiblocked:electricity_resistant_reinforced_casing",
+        "frontTexture": "multiblocked:blocks/gregtech_front",
+        "type": "gregtech",
+        "postRenderer": false
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "sml_drill_l",
+  "basePattern": {
+    "structureDir": [
+      "BACK",
+      "UP",
+      "RIGHT"
+    ],
+    "pattern": [
+      [
+        "AAAA  BBB  AAAA",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    CCCCCCC    ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA  BBB  AAAA",
+        " AB    B    BA ",
+        " AA    B    AA ",
+        " AA    B    AA ",
+        "  B    B    B  ",
+        "       B       ",
+        "               ",
+        "               ",
+        "               ",
+        "   CCCCCCCCC   ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    CCCCCCC    ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA  BBB  AAAA",
+        " BB         BB ",
+        " AB         BA ",
+        " AA         AA ",
+        " BAA       AAB ",
+        "  BB   B   BB  ",
+        "       B       ",
+        "               ",
+        "               ",
+        "  CCC     CCC  ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "   C       C   ",
+        "       C       ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA       AAAA",
+        "               ",
+        "               ",
+        "               ",
+        "  AA       AA  ",
+        "  BAA     AAB  ",
+        "   BB  B  BB   ",
+        "               ",
+        "               ",
+        " CCC       CCC ",
+        "   C       C   ",
+        "   CC     CC   ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "  C         C  ",
+        "               ",
+        "      CCC      ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "   AA     AA   ",
+        "   BAAAAAAAB   ",
+        "    BB A BB    ",
+        "               ",
+        "CCC         CCC",
+        "               ",
+        "   CC     CC   ",
+        "    CC   CC    ",
+        "      CCC      ",
+        "       C       ",
+        "       C       ",
+        "               ",
+        " C           C ",
+        "               ",
+        "    C  C  C    ",
+        "    C  C  C    ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    AA   AA    ",
+        "    BAAAAAB    ",
+        "     A   A     ",
+        "CC           CC",
+        "               ",
+        "               ",
+        "    CC   CC    ",
+        "     CC CC     ",
+        "               ",
+        "       C       ",
+        "               ",
+        " C           C ",
+        "               ",
+        "     C   C     ",
+        "               ",
+        "     C C C     ",
+        "               ",
+        "               "
+      ],
+      [
+        "BBB         BBB",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    A     A    ",
+        "     AAAAA     ",
+        "      AAA      ",
+        "CC    AAA    CC",
+        "               ",
+        "               ",
+        "               ",
+        "    CC   CC    ",
+        "               ",
+        "       C       ",
+        "       C       ",
+        " C    CCC    C ",
+        "      C C      ",
+        "   C       C   ",
+        "               ",
+        "               ",
+        "      C C      ",
+        "               "
+      ],
+      [
+        "BBB    D    BBB",
+        " B     D     B ",
+        " B     D     B ",
+        " B     D     B ",
+        " B     D     B ",
+        " BB    D    BB ",
+        "  BBA  D  ABB  ",
+        "    AAADAAE    ",
+        "      ADA      ",
+        "CC    ADA    CC",
+        "       D       ",
+        "       D       ",
+        "       D       ",
+        "    C  D  C    ",
+        "    C  D  C    ",
+        "    CCCDCCC    ",
+        "      CDC      ",
+        " C    CDC    C ",
+        "  C    @L   C  ",
+        "   CC  H  CC   ",
+        "    C     C    ",
+        "     C   C     ",
+        "               ",
+        "       C       "
+      ],
+      [
+        "BBB         BBB",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    A     A    ",
+        "     AAAAA     ",
+        "      AAA      ",
+        "CC    AAA    CC",
+        "               ",
+        "               ",
+        "               ",
+        "    CC   CC    ",
+        "               ",
+        "       C       ",
+        "       C       ",
+        " C    CCC    C ",
+        "      CJC      ",
+        "   C       C   ",
+        "               ",
+        "               ",
+        "      C C      ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    AA   AA    ",
+        "    BAAAAAB    ",
+        "     A   A     ",
+        "CC           CC",
+        "               ",
+        "               ",
+        "    CC   CC    ",
+        "     CC CC     ",
+        "               ",
+        "       C       ",
+        "               ",
+        " C           C ",
+        "               ",
+        "     C   C     ",
+        "               ",
+        "     C C C     ",
+        "               ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "   AA     AA   ",
+        "   BAAAAAAAB   ",
+        "    BB A BB    ",
+        "               ",
+        "CCC         CCC",
+        "               ",
+        "   CC     CC   ",
+        "    CC   CC    ",
+        "      CCC      ",
+        "       C       ",
+        "       C       ",
+        "               ",
+        " C           C ",
+        "               ",
+        "    C  C  C    ",
+        "    C  C  C    ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA       AAAA",
+        "               ",
+        "               ",
+        "               ",
+        "  AA       AA  ",
+        "  BAA     AAB  ",
+        "   BB  B  BB   ",
+        "               ",
+        "               ",
+        " CCC       CCC ",
+        "   C       C   ",
+        "   CC     CC   ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "  C         C  ",
+        "               ",
+        "      CCC      ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA  BBB  AAAA",
+        " BB         BB ",
+        " AB         BA ",
+        " AA         AA ",
+        " BAA       AAB ",
+        "  BB   B   BB  ",
+        "       B       ",
+        "               ",
+        "               ",
+        "  CCC     CCC  ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "   C       C   ",
+        "       C       ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA  BBB  AAAA",
+        " AB    B    BA ",
+        " AA    B    AA ",
+        " AA    B    AA ",
+        "  B    B    B  ",
+        "       B       ",
+        "               ",
+        "               ",
+        "               ",
+        "   CCCCCCCCC   ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    CCCCCCC    ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA  BBB  AAAA",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    CCCCCCC    ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "blocks": [
+          {
+            "id": "mek1000:uranite_flux_casing"
+          }
+        ],
+        "type": "blocks"
+      },
+      "controller": {
+        "location": "mek1000:sml_drill_l",
+        "type": "component"
+      },
+      "B": {
+        "blocks": [
+          {
+            "id": "mek1000:wtf_casing"
+          }
+        ],
+        "type": "blocks"
+      },
+      "C": {
+        "blocks": [
+          {
+            "id": "mek1000:electricity_resistant_reinforced_casing"
+          }
+        ],
+        "type": "blocks"
+      },
+      "D": {
+        "blocks": [
+          {
+            "id": "mek1000:laser_glass"
+          }
+        ],
+        "type": "blocks"
+      },
+      "E": {
+        "blocks": [
+          {
+            "id": "mek1000:imitation_sps_port"
+          }
+        ],
+        "type": "blocks"
+      },
+      "F": {
+        "blocks": [
+          {
+            "id": "mek1000:catalyst_holder"
+          }
+        ],
+        "type": "blocks",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "slotName": "catalyst"
+      },
+      "G": {
+        "blocks": [
+          {
+            "id": "dankstorage:dock"
+          }
+        ],
+        "type": "blocks"
+      },
+      "H": {
+        "capability": "item",
+        "type": "capability",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "OUT",
+        "slotName": "output"
+      },
+      "I": {
+        "location": "mek1000:imitation_sps_port",
+        "type": "component",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "IN",
+        "slotName": "energy"
+      },
+      "J": {
+        "capability": "forge_energy",
+        "type": "capability",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "IN",
+        "slotName": "energy"
+      },
+      "l": {
+        "capability": "item",
+        "type": "capability",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "IN",
+        "slotName": "catalyst"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "C"
+      ],
+      "D": [
+        "D"
+      ],
+      "E": [
+        "E"
+      ],
+      "H": [
+        "G",
+        "H"
+      ],
+      "J": [
+        "I",
+        "J"
+      ],
+      "L": [
+        "F",
+        "l"
+      ]
+    }
+  }
+}

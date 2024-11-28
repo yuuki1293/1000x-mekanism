@@ -1,0 +1,30 @@
+{
+  "name": "generator",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "fuelTexture": "multiblocked:textures/gui/progress_bar_fuel.png",
+  "recipes": [
+    {
+      "uid": "generator",
+      "duration": 2000,
+      "tickInputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:dvt",
+              "amount": 1
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickOutputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,500 @@
+{
+  "name": "singurarity_generator",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "fuelTexture": "multiblocked:textures/gui/progress_bar_fuel.png",
+  "recipes": [
+    {
+      "uid": "amethyst",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_amethyst",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:amethyst_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "certus",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_certus",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:certusquartz_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "coal",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_coal",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:coal_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "copper",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_copper",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:copper_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "diamond",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_diamond",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:diamond_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "emerald",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_emerald",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emerald_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "fluorite",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_fluorite",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:fluorite_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "gold",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_gold",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:gold_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "iridium",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_iridium",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:iridium_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "iron",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_iron",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:iron_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "lapis",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_lapis",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:lapis_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "lead",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_lead",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:lead_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "osmium",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_osmium",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:osmium_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "quartz",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_quartz",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:quartz_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "redstone",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_redstone",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:redstone_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "tin",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_tin",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:tin_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "uranium",
+      "duration": 10,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:vaporized_uranium",
+              "amount": 2147483647
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:uranium_singularity"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

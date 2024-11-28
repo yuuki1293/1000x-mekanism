@@ -1,0 +1,416 @@
+{
+  "version": 3,
+  "location": "mek1000:sml_drill_m",
+  "traits": {
+    "recipe_progress": {
+      "cIO": 2,
+      "gIO": 2,
+      "mbdIO": 2,
+      "slotName": "",
+      "x": 51,
+      "y": 140,
+      "width": 60,
+      "height": 18,
+      "texture": "multiblocked:textures/gui/energy_bar.png",
+      "fillDirection": "LEFT_TO_RIGHT"
+    },
+    "forge_energy": {
+      "cIO": 0,
+      "gIO": 2,
+      "mbdIO": 0,
+      "slotName": "energy",
+      "x": 55,
+      "y": 79,
+      "width": 60,
+      "height": 18,
+      "texture": "multiblocked:textures/gui/energy_bar.png",
+      "fillDirection": "LEFT_TO_RIGHT",
+      "capacity": 2147483647,
+      "maxReceive": 2147483647,
+      "maxExtract": 2147483647
+    }
+  },
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 6.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "harvestLevel": 0,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "baseTexture": "multiblocked:wither_glass",
+        "frontTexture": "multiblocked:blocks/gregtech_front",
+        "type": "gregtech",
+        "postRenderer": false
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "sml_drill_m",
+  "basePattern": {
+    "structureDir": [
+      "BACK",
+      "UP",
+      "RIGHT"
+    ],
+    "pattern": [
+      [
+        "AAAA  BBB  AAAA",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA  BBB  AAAA",
+        " AB    B    BA ",
+        " AA    B    AA ",
+        " AA    B    AA ",
+        "  B    B    B  ",
+        "       B       ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA  BBB  AAAA",
+        " BB         BB ",
+        " AB         BA ",
+        " AA         AA ",
+        " BAA       AAB ",
+        "  BB   B   BB  ",
+        "       B       ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA       AAAA",
+        "               ",
+        "               ",
+        "               ",
+        "  AA       AA  ",
+        "  BAA     AAB  ",
+        "   BB  B  BB   ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "   AA     AA   ",
+        "   BAAAAAAAB   ",
+        "    BB A BB    ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    AA   AA    ",
+        "    BAAAAAB    ",
+        "     A   A     ",
+        "               ",
+        "               "
+      ],
+      [
+        "BBB         BBB",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    A     A    ",
+        "     AAAAA     ",
+        "      AAA      ",
+        "      AAA      ",
+        "               "
+      ],
+      [
+        "BBB    C    BBB",
+        " B     C     B ",
+        " B     C     B ",
+        " B     C     B ",
+        " B     C     B ",
+        " BB    C    BB ",
+        "  BBA  C  ABB  ",
+        "    AAACAAD    ",
+        "      ACA      ",
+        "      A@A      ",
+        "       H       "
+      ],
+      [
+        "BBB         BBB",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    A     A    ",
+        "     AAAAA     ",
+        "      AAA      ",
+        "      AAA      ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "    AA   AA    ",
+        "    BAAAAAB    ",
+        "     A   A     ",
+        "               ",
+        "               "
+      ],
+      [
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "   AA     AA   ",
+        "   BAAAAAAAB   ",
+        "    BB A BB    ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA       AAAA",
+        "               ",
+        "               ",
+        "               ",
+        "  AA       AA  ",
+        "  BAA     AAB  ",
+        "   BB  B  BB   ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA  BBB  AAAA",
+        " BB         BB ",
+        " AB         BA ",
+        " AA         AA ",
+        " BAA       AAB ",
+        "  BB   B   BB  ",
+        "       B       ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA  BBB  AAAA",
+        " AB    B    BA ",
+        " AA    B    AA ",
+        " AA    B    AA ",
+        "  B    B    B  ",
+        "       B       ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ],
+      [
+        "AAAA  BBB  AAAA",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               ",
+        "               "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "blocks": [
+          {
+            "id": "mek1000:uranite_flux_casing"
+          }
+        ],
+        "type": "blocks"
+      },
+      "controller": {
+        "location": "mek1000:sml_drill_m",
+        "type": "component"
+      },
+      "B": {
+        "blocks": [
+          {
+            "id": "mek1000:wtf_casing"
+          }
+        ],
+        "type": "blocks"
+      },
+      "C": {
+        "blocks": [
+          {
+            "id": "integratedterminals:chorus_glass"
+          }
+        ],
+        "type": "blocks"
+      },
+      "D": {
+        "blocks": [
+          {
+            "id": "mek1000:imitation_sps_port"
+          }
+        ],
+        "type": "blocks"
+      },
+      "G": {
+        "blocks": [
+          {
+            "id": "ironchest:crystal_chest"
+          }
+        ],
+        "type": "blocks"
+      },
+      "H": {
+        "capability": "item",
+        "type": "capability",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "OUT",
+        "slotName": "output"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "C"
+      ],
+      "D": [
+        "D"
+      ],
+      "H": [
+        "G",
+        "H"
+      ]
+    }
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "name": "fusion",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "fuelTexture": "multiblocked:textures/gui/progress_bar_fuel.png",
+  "recipes": [
+    {
+      "uid": "cell",
+      "duration": 3000,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "megacells:mega_energy_cell"
+              }
+            },
+            "chance": 1.0,
+            "uiName": "input_0"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 8,
+              "ingredient": {
+                "item": "mek1000:infinity_ingot"
+              }
+            },
+            "chance": 1.0,
+            "uiName": "input_1"
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "ae2:creative_energy_cell"
+              }
+            },
+            "chance": 1.0,
+            "uiName": "output"
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "chemical",
+      "duration": 3000,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekanism:ultimate_chemical_tank"
+              }
+            },
+            "chance": 1.0,
+            "uiName": "item_0"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 8,
+              "ingredient": {
+                "item": "mek1000:infinity_ingot"
+              }
+            },
+            "chance": 1.0,
+            "uiName": "item_1"
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekanism:creative_chemical_tank"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "output",
+            "uiName": "output"
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "fin",
+      "duration": 3000,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 64,
+              "ingredient": {
+                "item": "mek1000:infinity_ingot"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "input_0",
+            "uiName": "input_0"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekanism:creative_bin"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "input_1",
+            "uiName": "input_1"
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "ae2:creative_item_cell"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "output",
+            "uiName": "output"
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "tank",
+      "duration": 3000,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekanism:ultimate_fluid_tank"
+              }
+            },
+            "chance": 1.0,
+            "uiName": "input_0"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 8,
+              "ingredient": {
+                "item": "mek1000:infinity_ingot"
+              }
+            },
+            "chance": 1.0,
+            "uiName": "input_1"
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekanism:creative_fluid_tank"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "output",
+            "uiName": "output"
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "test",
+      "duration": 1000,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:eternal_singularity"
+              }
+            },
+            "chance": 1.0,
+            "uiName": "input_0"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:neutronium_ingot"
+              }
+            },
+            "chance": 1.0,
+            "uiName": "input_1"
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:infinity_ingot"
+              }
+            },
+            "chance": 1.0,
+            "uiName": "output"
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    }
+  ]
+}

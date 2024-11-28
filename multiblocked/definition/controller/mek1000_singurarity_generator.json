@@ -1,0 +1,191 @@
+{
+  "version": 3,
+  "location": "mek1000:singurarity_generator",
+  "traits": {},
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 6.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "harvestLevel": 0,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "mek1000:black_casing",
+          "meta": 0
+        },
+        "type": "blockstate",
+        "postRenderer": true
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "singurarity_generator",
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "AAAAA",
+        "AA@AA",
+        "ABBBA",
+        "ABBBA",
+        "AAAAA"
+      ],
+      [
+        "AAAAA",
+        "ABBBA",
+        "ABBBA",
+        "ABBBA",
+        "A   A"
+      ],
+      [
+        "AAAAA",
+        "ABBBA",
+        "DBBBC",
+        "ABBBA",
+        "A   A"
+      ],
+      [
+        "AAAAA",
+        "ABBBA",
+        "ABBBA",
+        "ABBBA",
+        "A   A"
+      ],
+      [
+        "AAAAA",
+        "AAAAA",
+        "AAAAA",
+        "AAAAA",
+        "AAAAA"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "blocks": [
+          {
+            "id": "mek1000:black_casing"
+          }
+        ],
+        "type": "blocks"
+      },
+      "controller": {
+        "location": "mek1000:singurarity_generator",
+        "type": "component"
+      },
+      "B": {
+        "blocks": [
+          {
+            "id": "mek1000:electricity_resistant_reinforced_casing"
+          }
+        ],
+        "type": "blocks"
+      },
+      "C": {
+        "blocks": [
+          {
+            "id": "dankstorage:dock"
+          }
+        ],
+        "type": "blocks"
+      },
+      "D": {
+        "capability": "mek_gas",
+        "type": "capability",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "IN",
+        "slotName": "input"
+      },
+      "E": {
+        "capability": "item",
+        "type": "capability",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "OUT",
+        "slotName": "output"
+      },
+      "F": {
+        "blocks": [
+          {
+            "id": "mek1000:perfect_gas_input"
+          }
+        ],
+        "type": "blocks",
+        "io": "IN",
+        "slotName": "input"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "C",
+        "E"
+      ],
+      "D": [
+        "D",
+        "F"
+      ]
+    }
+  }
+}

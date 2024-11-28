@@ -1,0 +1,152 @@
+{
+  "version": 3,
+  "location": "mek1000:cobble_generator",
+  "traits": {
+    "item": [
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 0,
+        "slotName": "cataryst",
+        "x": 78,
+        "y": 77,
+        "autoIO": false
+      }
+    ]
+  },
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 6.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "harvestLevel": 0,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "baseTexture": "multiblocked:uranite_flux_casing",
+        "frontTexture": "multiblocked:blocks/gregtech_front",
+        "type": "gregtech",
+        "postRenderer": false
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "cobble",
+  "basePattern": {
+    "structureDir": [
+      "BACK",
+      "UP",
+      "RIGHT"
+    ],
+    "pattern": [
+      [
+        "D",
+        " "
+      ],
+      [
+        "@",
+        "E"
+      ],
+      [
+        "C",
+        " "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "": {
+        "capability": "item",
+        "type": "capability",
+        "io": "OUT"
+      },
+      "A": {
+        "blocks": [
+          {
+            "id": "ae2:sky_stone_tank"
+          }
+        ],
+        "type": "blocks",
+        "minCount": 2,
+        "maxCount": 2,
+        "io": "IN"
+      },
+      "controller": {
+        "location": "mek1000:cobble_generator",
+        "type": "component"
+      },
+      "B": {
+        "blocks": [
+          {
+            "id": "ironchest:iron_chest"
+          }
+        ],
+        "type": "blocks"
+      },
+      "C": {
+        "capability": "fluid",
+        "type": "capability",
+        "io": "IN",
+        "slotName": "fluid_0"
+      },
+      "d": {
+        "capability": "fluid",
+        "type": "capability",
+        "io": "IN",
+        "slotName": "fluid_1"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "C": [
+        "A",
+        "C"
+      ],
+      "D": [
+        "A",
+        "d"
+      ],
+      "E": [
+        "",
+        "B"
+      ]
+    }
+  }
+}

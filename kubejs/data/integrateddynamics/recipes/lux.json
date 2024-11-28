@@ -1,0 +1,8 @@
+{
+    "type":"integrateddynamics:mechanical_squeezer",
+    "item":{"item":"ultimatesolarpanels:pile_of_sunnarium"},
+"result":{
+"fluid":{
+"fluid":"ultimatesolarpanels:lux", "amount":10
+}
+},"duration":1}
