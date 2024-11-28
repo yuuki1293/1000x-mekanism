@@ -1,0 +1,27 @@
+{
+  "name": "iridium_ore",
+  "properties": {
+    "strength": 4.0,
+    "requiredTool": "iron_pickaxe"
+  },
+  "drops": {
+    "id": "ultimatesolarpanels:iridium_ore",
+    "rate": {
+      "min_inclusive": 4,
+      "max_inclusive": 4
+    }
+  },
+  "spawnRate": {
+    "spawnDimension": "nether",
+    "veinSize": 12,
+    "spawnFrequency": 32,
+    "minSpawnY": -63,
+    "maxSpawnY": 255
+  },
+  "texture": {
+        "baseTexture": "block/netherrack",
+        "overlayTexture": "superores:block/ore_overlay",
+        "color": "#ffffff",
+        "overlayColor": "#ffffff"
+    }
+}

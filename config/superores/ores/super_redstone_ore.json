@@ -1,0 +1,22 @@
+{
+  "name": "redstone_ore",
+  "hasDeepslate": true,
+  "properties": {
+    "strength": 3.0,
+    "requiredTool": "iron_pickaxe"
+  },
+  "drops": {
+    "id": "minecraft:redstone",
+    "rate": {
+      "min_inclusive": 16,
+      "max_inclusive": 16
+    }
+  },
+  "spawnRate": {
+    "spawnDimension": "overworld",
+    "veinSize": 16,
+    "spawnFrequency": 32,
+    "minSpawnY": -63,
+    "maxSpawnY": 0
+  }
+}

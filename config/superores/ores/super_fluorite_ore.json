@@ -1,0 +1,28 @@
+{
+  "name": "fluorite_ore",
+  "hasDeepslate": true,
+  "properties": {
+    "strength": 4.0,
+    "requiredTool": "stone_pickaxe"
+  },
+  "drops": {
+    "id": "mekanism:fluorite_gem",
+    "rate": {
+      "min_inclusive": 16,
+      "max_inclusive":32
+    }
+  },
+  "spawnRate": {
+    "spawnDimension": "overworld",
+    "veinSize": 12,
+    "spawnFrequency": 8,
+    "minSpawnY": -63,
+    "maxSpawnY": 255
+  },
+  "texture": {
+        "baseTexture": "block/stone",
+        "overlayTexture": "superores:block/ore_overlay",
+        "color": "#ccf8ff",
+        "overlayColor": "#ccf8ff"
+    }
+}

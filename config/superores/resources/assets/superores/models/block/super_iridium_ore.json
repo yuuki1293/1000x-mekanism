@@ -1,0 +1,8 @@
+{
+  "parent": "superores:block/base_ore",
+  "textures": {
+    "particle": "block/netherrack",
+    "layer0": "block/netherrack",
+    "layer1": "superores:block/ore_overlay"
+  }
+}

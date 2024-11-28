@@ -1,0 +1,28 @@
+{
+  "name": "lead_ore",
+  "hasDeepslate": true,
+  "properties": {
+    "strength": 4.0,
+    "requiredTool": "stone_pickaxe"
+  },
+  "drops": {
+    "id": "mekanism:raw_lead",
+    "rate": {
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    }
+  },
+  "spawnRate": {
+    "spawnDimension": "overworld",
+    "veinSize": 12,
+    "spawnFrequency": 8,
+    "minSpawnY": -63,
+    "maxSpawnY": 255
+  },
+  "texture": {
+        "baseTexture": "block/stone",
+        "overlayTexture": "superores:block/ore_overlay",
+        "color": "#708090",
+        "overlayColor": "#708090"
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "nether_quartz_ore",
+  "properties": {
+    "strength": 4.0,
+    "requiredTool": "iron_pickaxe"
+  },
+  "drops": {
+    "id": "minecraft:quartz",
+    "rate": {
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    }
+  },
+  "spawnRate": {
+    "spawnDimension": "nether",
+    "veinSize": 12,
+    "spawnFrequency": 32,
+    "minSpawnY": -63,
+    "maxSpawnY": 255
+  }
+}

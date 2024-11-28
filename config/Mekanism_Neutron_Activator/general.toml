@@ -1,0 +1,8 @@
+
+#General Config. This config is synced from server to client.
+[general]
+	#Max tank size of fusion neutron activator.
+	fusionNeutronActivatorMaxTankSize = 100000
+	#Multiplier of fusion neutron activator's production rate. Actual producton rate is this value multiplied by fusion fuel burned.
+	fusionNeutronActivatorMultiplier = 3.0
+
