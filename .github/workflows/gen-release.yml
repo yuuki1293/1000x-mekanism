@@ -6,7 +6,7 @@ on:
       tag:
         description: '新バージョン'
         required: true
-        default: 'b0.0.0'
+        default: 'b0.0.0' # AUTO-UPDATE
 
 jobs:
   run:
@@ -32,6 +32,7 @@ jobs:
       run: |
         git config --global user.name '${{ steps.generate-token.outputs.app-slug }}[bot]'
         git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-token.outputs.app-slug }}[bot]@users.noreply.github.com'
+        git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
     
     - name: リポジトリをチェックアウト
       uses: actions/checkout@v4
@@ -41,15 +42,40 @@ jobs:
         tag=${{ github.event.inputs.tag }}
         echo "tag=${tag}"
         sed -i "s/PACK_VERSION=".*"/PACK_VERSION=\"${tag}\"/" gen-pack-config.sh
+        sed -i "s/( +default: )'.*" # AUTO-UPDATE/\1'${tag}'/" .github/workflows/gen-release.yml
       shell: bash
     
     - name: コミットしタグ付きでプッシュ
       env:
         GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
       run: |
-        # git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
         git config --global push.followTags true
         git add gen-pack-config.sh
         git commit -m 'パックバージョンを${{ github.event.inputs.tag }}に更新'
         git tag -a ${{ github.event.inputs.tag }} -m 'パックバージョン${{ github.event.inputs.tag }}'
         git push
+    
+    - name: パックを生成
+      id: gen-pack
+      run: |
+        echo "pack_file_name=$(./gen-pack.sh)" | tee -a $GITHUB_OUTPUT
+      shell: bash
+    
+    - name: パックを解凍
+      run: |
+        cd pack
+        unzip ${{ steps.gen-pack.outputs.pack_file_name }}.zip -d ${{ steps.gen-pack.outputs.pack_file_name }}
+      shell: bash
+
+    - name: Artifactsにアップロード
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ steps.gen-pack.outputs.pack_file_name }}
+        path: pack/${{ steps.gen-pack.outputs.pack_file_name }}/
+    
+    - name: リリースを作成
+      uses: softprops/action-gh-release@v2
+      if: startsWith(github.ref, 'refs/tags/') # タグがpushされたときのみに限定
+      with:
+        generate_release_notes: true
+        files: pack/*.zip

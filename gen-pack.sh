@@ -39,4 +39,4 @@ cd packtmp/
 zip -qr ../pack/$PACK_FILE_NAME-$PACK_VERSION.zip *
 
 echoerr 保存完了
-echo pack/$PACK_FILE_NAME-$PACK_VERSION.zip
+echo $PACK_FILE_NAME-$PACK_VERSION
