@@ -1,4 +1,4 @@
-name: パックを指定したバージョンに更新
+name: パックを指定したバージョンでリリース
 
 on:
   workflow_dispatch:
@@ -28,14 +28,15 @@ jobs:
         GH_TOKEN: ${{ steps.generate-token.outputs.token }}
       run: echo "user-id=$(gh api "/users/${{ steps.generate-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
     
-    - name: Commiterを設定
+    - name: リポジトリをチェックアウト
+      uses: actions/checkout@v4
+    
+    - name: Commiter等を設定
       run: |
         git config --global user.name '${{ steps.generate-token.outputs.app-slug }}[bot]'
         git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-token.outputs.app-slug }}[bot]@users.noreply.github.com'
         git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
-    
-    - name: リポジトリをチェックアウト
-      uses: actions/checkout@v4
+        git config --global push.followTags true
     
     - name: バージョンを書き換え
       run: |
@@ -49,7 +50,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
       run: |
-        git config --global push.followTags true
         git add gen-pack-config.sh
         git commit -m 'パックバージョンを${{ github.event.inputs.tag }}に更新'
         git tag -a ${{ github.event.inputs.tag }} -m 'パックバージョン${{ github.event.inputs.tag }}'
