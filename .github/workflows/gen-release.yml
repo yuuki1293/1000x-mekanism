@@ -14,6 +14,7 @@ jobs:
     permissions:
       actions: write
       contents: write
+      workflows: write
 
     steps:
     - name: トークンを生成
