@@ -43,7 +43,7 @@ jobs:
         tag=${{ github.event.inputs.tag }}
         echo "tag=${tag}"
         sed -i "s/PACK_VERSION=".*"/PACK_VERSION=\"${tag}\"/" gen-pack-config.sh
-        sed -i "s/\(default:\) '.*' \(# AUTO-UPDATE\)/\1 'b0.4.3' \2/" .github/workflows/gen-release.yml
+        sed -i "s/\(default:\) '.*' \(# AUTO-UPDATE\)/\1 '${tag}' \2/" .github/workflows/gen-release.yml
       shell: bash
     
     - name: コミットしタグ付きでプッシュ
@@ -76,5 +76,6 @@ jobs:
     - name: リリースを作成
       uses: softprops/action-gh-release@v2
       with:
+        tag_name: ${{ github.event.inputs.tag }}
         generate_release_notes: true
         files: pack/*.zip
