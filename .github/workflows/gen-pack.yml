@@ -1,4 +1,4 @@
-name: パックを出力しArtifactsにアップロード
+name: 自動でパックをArtifactsに出力
 
 on:
   workflow_dispatch:
