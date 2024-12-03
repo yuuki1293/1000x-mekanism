@@ -6,7 +6,7 @@ on:
       tag:
         description: '新バージョン'
         required: true
-        default: 'b0.4.3' # AUTO-UPDATE
+        default: 'b0.0.0'
 
 jobs:
   run:
@@ -14,7 +14,6 @@ jobs:
     permissions:
       actions: write
       contents: write
-      workflows: write
 
     steps:
     - name: トークンを生成
@@ -45,14 +44,14 @@ jobs:
         tag=${{ github.event.inputs.tag }}
         echo "tag=${tag}"
         sed -i "s/PACK_VERSION=".*"/PACK_VERSION=\"${tag}\"/" gen-pack-config.sh
-        sed -i "s/\(default:\) '.*' \(# AUTO-UPDATE\)/\1 '${tag}' \2/" .github/workflows/gen-release.yml
+        # sed -i "s/\(default:\) '.*' \(# AUTO-UPDATE\)/\1 '${tag}' \2/" .github/workflows/gen-release.yml
       shell: bash
     
     - name: コミットしタグ付きでプッシュ
       env:
         GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
       run: |
-        git add gen-pack-config.sh .github/workflows/gen-release.yml
+        git add gen-pack-config.sh # .github/workflows/gen-release.yml
         git commit -m 'パックバージョンを${{ github.event.inputs.tag }}に更新'
         git tag -a ${{ github.event.inputs.tag }} -m 'パックバージョン${{ github.event.inputs.tag }}'
         git push
