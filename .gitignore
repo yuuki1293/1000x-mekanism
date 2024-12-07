@@ -1,3 +1,8 @@
 /pack/
 /packtmp/
 /*.zip
+/kubejs/server_scrpts/advanced_patches
+/kubejs/startup_scrpts/1000000_overdrive
+/kubejs/startup_scrpts/soy_delight
+/kubejs/startup_scrpts/valinium
+/multiblocked/test_orerefinery.mbdui
