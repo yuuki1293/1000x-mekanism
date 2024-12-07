@@ -4,6 +4,90 @@
   "fuelTexture": "multiblocked:textures/gui/progress_bar_fuel.png",
   "recipes": [
     {
+      "uid": "amethyst",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:budding_amethyst"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "catalyst",
+            "uiName": "catalyst"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:emc"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "minecraft:amethyst_block"
+              }
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "minecraft:amethyst_block"
+              }
+            },
+            "chance": 0.8
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1024,
+              "ingredient": {
+                "item": "minecraft:amethyst_block"
+              }
+            },
+            "chance": 0.5
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 8192,
+              "ingredient": {
+                "item": "minecraft:amethyst_block"
+              }
+            },
+            "chance": 0.1
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
       "uid": "certus",
       "duration": 20,
       "inputs": {

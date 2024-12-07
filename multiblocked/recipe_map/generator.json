@@ -25,6 +25,75 @@
           }
         ]
       }
+    },
+    {
+      "uid": "saltless_soysauce",
+      "duration": 2000,
+      "tickInputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:saltless_dried_soysouce",
+              "amount": 1
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickOutputs": {
+        "forge_energy": [
+          {
+            "content": 4382750,
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "ultimate_valine",
+      "duration": 20000,
+      "inputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:ultimate_valine",
+              "amount": 1
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickOutputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "valine",
+      "duration": 2000,
+      "tickInputs": {
+        "mek_gas": [
+          {
+            "content": {
+              "type": "mek1000:valine3g",
+              "amount": 1
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickOutputs": {
+        "forge_energy": [
+          {
+            "content": 57729,
+            "chance": 1.0
+          }
+        ]
+      }
     }
   ]
 }

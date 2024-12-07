@@ -69,6 +69,7 @@ onEvent('mekanism.gas.registry', event => {
     event.create('mek1000:vaporized_lead').color("0x5f9ea0")
     event.create('mek1000:vaporized_uranium').color("0x98fb98")
     event.create('mek1000:vaporized_osmium').color("0x87ceeb")
+    event.create('mek1000:ultimate_valine').fuel(2147483647,9223372036854775807).color("0x15080d")
 })
 onEvent('block.registry', event => {
     event.create('mek1000:fusion_coil')

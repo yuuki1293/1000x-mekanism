@@ -235,6 +235,21 @@ e:'mekanism:enriched_tin',
 t:'mek1000:illuminate_alloy',
 f:'mek1000:uranite_flux_casing'
 })
+event.custom({
+  "type": "mekanism:chemical_infusing",
+  "leftInput": {
+    "amount": 1000,
+    "gas": "mek1000:dvt"
+  },
+  "rightInput": {
+    "amount": 1,
+    "gas": "mek1000:soysauce"
+  },
+  "output": {
+    "gas": "mek1000:ultimate_valine",
+    "amount": 1
+  }
+}).id('mek1000:ultimate_valine')
 })
 onEvent('fluid.tags', event => {
   event.remove('minecraft:water','ultimatesolarpanels:lux')
