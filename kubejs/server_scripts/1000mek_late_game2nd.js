@@ -28,6 +28,26 @@ onEvent('recipes', event => {
     oxidize('minecraft:gold_ingot','mek1000:vaporized_gold',1)
     oxidize('ae2:certus_quartz_crystal','mek1000:vaporized_certus',1)
     oxidize('ultimatesolarpanels:iridium','mek1000:vaporized_iridium',1)
+
+    oxidize('mek1000:compressed_purified_quartz_rawore','mek1000:vaporized_quartz',6000)
+    oxidize('mek1000:compressed_purified_iron_rawore','mek1000:vaporized_iron',6750)
+    oxidize('mek1000:compressed_purified_coal_rawore','mek1000:vaporized_coal',1600)
+    oxidize('mek1000:compressed_purified_diamond_rawore','mek1000:vaporized_diamond',200)
+    oxidize('mek1000:compressed_purified_emerald_rawore','mek1000:vaporized_emerald',200)
+    oxidize('mek1000:compressed_purified_lapis_rawore','mek1000:vaporized_lapis',4800)
+    oxidize('mek1000:compressed_purified_copper_rawore','mek1000:vaporized_copper',6850)
+    oxidize('minecraft:amethyst_block','mek1000:vaporized_amethyst',4)
+    oxidize('64x minecraft:amethyst_block','mek1000:vaporized_amethyst',256)
+    oxidize('mek1000:crystal_redstone','mek1000:vaporized_redstone',48)
+    oxidize('64x mek1000:crystal_redstone','mek1000:vaporized_redstone',3072)
+    oxidize('mek1000:compressed_purified_fluorite_rawore','mek1000:vaporized_fluorite',6000)
+    oxidize('mek1000:compressed_purified_osmium_rawore','mek1000:vaporized_osmium',6750)
+    oxidize('mek1000:compressed_purified_tin_rawore','mek1000:vaporized_tin',6750)
+    oxidize('mek1000:compressed_purified_lead_rawore','mek1000:vaporized_lead',6750)
+    oxidize('mek1000:compressed_purified_uranium_rawore','mek1000:vaporized_uranium',6750)
+    oxidize('mek1000:compressed_purified_gold_rawore','mek1000:vaporized_gold',6750)
+    oxidize('mek1000:compressed_purified_iron_rawore','mek1000:vaporized_certus',8000)
+    oxidize('mek1000:compressed_purified_iridium_rawore','mek1000:vaporized_iridium',6750)
     event.custom({
         "type": "mekanism:nucleosynthesizing",
         "itemInput": {
@@ -124,4 +144,28 @@ c:'ae2:creative_energy_cell',
 d:Item.of('ironjetpacks:jetpack', '{Id:"ironjetpacks:creative",Throttle:1.0d}'),
 e:'mekanism:creative_chemical_tank'
 })
+event.shaped('1x mekanism:creative_chemical_tank', [
+  '   ', 
+  ' A ',
+  '   '  
+], {
+  A: 'mekanism:creative_chemical_tank'
+}
+)
+event.shaped('1x mekanism:creative_bin', [
+  '   ', 
+  ' A ',
+  '   '  
+], {
+  A: 'mekanism:creative_bin'
+}
+)
+event.shaped('1x mekanism:creative_fluid_tank', [
+  '   ', 
+  ' A ',
+  '   '  
+], {
+  A: 'mekanism:creative_fluid_tank'
+}
+)
 })
