@@ -1,0 +1,192 @@
+{
+  "version": 3,
+  "location": "mek1000:hyper_refinery",
+  "ui": "test_orerefinery2.mbdui",
+  "traits": {
+    "recipe_progress": {
+      "cIO": 2,
+      "gIO": 2,
+      "mbdIO": 2,
+      "slotName": "p",
+      "x": 5,
+      "y": 5,
+      "width": 60,
+      "height": 18,
+      "texture": "multiblocked:textures/gui/energy_bar.png",
+      "fillDirection": "LEFT_TO_RIGHT"
+    },
+    "item": [
+      {
+        "cIO": 1,
+        "gIO": 1,
+        "mIO": 2,
+        "slotName": "o1",
+        "x": 5,
+        "y": 5,
+        "autoIO": false
+      },
+      {
+        "cIO": 1,
+        "gIO": 1,
+        "mIO": 2,
+        "slotName": "o2",
+        "x": 5,
+        "y": 5,
+        "autoIO": false
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "mIO": 2,
+        "slotName": "i",
+        "x": 5,
+        "y": 5,
+        "autoIO": false
+      }
+    ],
+    "fluid": [
+      {
+        "cIO": 2,
+        "gIO": 2,
+        "mIO": 2,
+        "slotName": "w",
+        "x": 5,
+        "y": 5,
+        "autoIO": false,
+        "tC": 2147483647,
+        "w": 18,
+        "h": 18,
+        "fillDir": "DOWN_TO_UP",
+        "valid": [
+          "\"{Amount:1000,FluidName:\\\"minecraft:water\\\"}\""
+        ]
+      }
+    ],
+    "forge_energy": {
+      "cIO": 0,
+      "gIO": 0,
+      "mbdIO": 2,
+      "slotName": "e",
+      "x": 5,
+      "y": 5,
+      "width": 60,
+      "height": 18,
+      "texture": "multiblocked:textures/gui/energy_bar.png",
+      "fillDirection": "LEFT_TO_RIGHT",
+      "capacity": 2147483647,
+      "maxReceive": 2147483647,
+      "maxExtract": 500
+    },
+    "mek_gas": [
+      {
+        "cIO": 0,
+        "gIO": 0,
+        "mIO": 2,
+        "slotName": "g",
+        "x": 5,
+        "y": 5,
+        "autoIO": false,
+        "tankCapability": 2147483647
+      }
+    ]
+  },
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasDynamicShape": false,
+    "hasCollision": true,
+    "destroyTime": 4.5,
+    "explosionResistance": 1000.0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.9,
+    "harvestLevel": 1,
+    "stackSize": 64,
+    "tabGroup": "multiblocked.all"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "baseTexture": "multiblocked:tin_casing",
+        "frontTexture": "multiblocked:electricity_resistant_reinforced_casing",
+        "type": "gregtech",
+        "postRenderer": false
+      }
+    },
+    "idle": {
+      "renderer": {
+        "baseTexture": "multiblocked:tin_casing",
+        "frontTexture": "multiblocked:large_refinery_notworking",
+        "type": "gregtech",
+        "postRenderer": false
+      },
+      "lightEmissive": 9,
+      "parent": "unformed",
+      "sound": {
+        "sound": "mekanism:tile.machine.laser",
+        "loop": false,
+        "delay": 0,
+        "volume": 1.0,
+        "pitch": 2.0
+      }
+    },
+    "working": {
+      "renderer": {
+        "baseTexture": "multiblocked:sps_casing",
+        "frontTexture": "multiblocked:large_refinery",
+        "type": "gregtech",
+        "postRenderer": false
+      },
+      "lightEmissive": 15,
+      "parent": "idle",
+      "sound": {
+        "sound": "mekanism:tile.machine.antiprotonic_nucleosynthesizer",
+        "loop": true,
+        "delay": 0,
+        "volume": 1.0,
+        "pitch": 0.45
+      }
+    },
+    "suspend": {
+      "renderer": {
+        "baseTexture": "multiblocked:sps_casing",
+        "frontTexture": "multiblocked:large_refinery_notworking",
+        "type": "gregtech",
+        "postRenderer": false
+      },
+      "lightEmissive": 15,
+      "parent": "working"
+    }
+  },
+  "recipeMap": "large_ore_refinery",
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "@"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "controller": {
+        "location": "mek1000:hyper_refinery",
+        "type": "component"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ]
+    }
+  }
+}
