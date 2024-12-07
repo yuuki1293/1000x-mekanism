@@ -11,6 +11,7 @@ on:
           - patch
           - minor
           - major
+          - none
 
 jobs:
   run:
@@ -51,6 +52,21 @@ jobs:
         git tag -a ${{ steps.update-version.outputs.new_version }} -m 'パックバージョン${{ steps.update-version.outputs.new_version }}'
         git push
     
+    - name: バージョンを取得
+      id: get-version
+      if: ${{ github.event.inputs.tag == 'none' }}
+      run: |
+        node internal/get-pack-version.js | tee -a $GITHUB_OUTPUT
+      shell: bash
+    
+    - name: タグを作成しプッシュ
+      if: ${{ github.event.inputs.tag == 'none' }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git tag -a ${{ steps.get-version.outputs.version }} -m 'パックバージョン${{ steps.get-version.outputs.version }}'
+        git push
+    
     - name: パックを生成
       id: gen-pack
       run: |
@@ -72,6 +88,6 @@ jobs:
     - name: リリースを作成
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: ${{ steps.update-version.outputs.new_version }}
+        tag_name: ${{ steps.update-version.outputs.new_version || steps.get-version.outputs.version }}
         generate_release_notes: false
         files: pack/*.zip
