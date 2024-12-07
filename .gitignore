@@ -1,3 +1,9 @@
 /pack/
 /packtmp/
 /*.zip
+/config/inventoryprofilesnext/
+/config/jei/world/
+/config/Mekanism/client.toml
+/config/forgematica/
+/config/forgematica.json
+/config/mafglib.json
