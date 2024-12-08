@@ -3,6 +3,7 @@ onEvent('item.registry', event => {
     event.create('mek1000:superheated_alloy')
     event.create('mek1000:antinomic_alloy')
     event.create('mek1000:cosmic_alloy').texture(`mek1000:item/cosmic_alloy`)
+    event.create("mek1000:wither_spawn").texture(`mek1000:item/wip`)
 })
 onEvent('mekanism.infuse_type.registry', event => {
     event.create('mek1000:sunnalium').color(0xffff00)
