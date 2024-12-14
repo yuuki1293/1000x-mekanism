@@ -35,7 +35,31 @@ onEvent('recipes', event => {
         "itemOutput":{"item":"mekanism:shard_iron"},
         "gasOutput":{"gas":"mek1000:aqua_regia","amount":100}
     })
-    let advanced_processing = (type) => {
+
+    let advanced_processing_mk2 = (type,outputs_5,mode) => {
+        //スタートアップ(鉱石->各種中間生成物へ):
+
+        event.custom({"type":"mekanism:reaction",
+            "itemInput":{"tag":`forge:raw_materials/${type}`},
+            "fluidInput":{"amount":75,"tag":"minecraft:water"},
+            "gasInput":{"amount":450,"gas":"mek1000:active_aqua_regia"},
+            "energyRequired":10,"duration":2,
+            "itemOutput":{"item":`mek1000:purified_${type}_rawore`,"amount":6}
+        })
+        event.custom({"type":"mekanism:reaction",
+            "itemInput":{"tag":`forge:ores/${type}`},
+            "fluidInput":{"amount":100,"tag":"minecraft:water"},
+            "gasInput":{"amount":600,"gas":"mek1000:active_aqua_regia"},
+            "energyRequired":10,"duration":6,
+            "itemOutput":{"item":`mek1000:purified_${type}_rawore`,"amount":8}
+        })
+        event.custom({"type":"mekanism:reaction",
+            "itemInput":{"tag":`forge:storage_blocks/raw_${type}`},
+            "fluidInput":{"amount":675,"tag":"minecraft:water"},
+            "gasInput":{"amount":4050,"gas":"mek1000:active_aqua_regia"},
+            "energyRequired":10,"duration":18,
+            "itemOutput":{"item":`mek1000:compressed_purified_${type}_rawore`,"amount":6}
+        })
 
         event.custom({"type":"mekanism:reaction",
             "itemInput":{"tag":`forge:raw_materials/${type}`},
@@ -58,8 +82,89 @@ onEvent('recipes', event => {
             "energyRequired":1080,"duration":20,
             "gasOutput":{"gas":"mek1000:active_"+type,"amount":270}
         })
-        event.custom({
-            type:"mekanism:chemical_infusing","chemicalType":"gas",leftInput:{"gas":"mek1000:aqua_regia","amount":100},rightInput:{"gas":"mek1000:active_"+type,"amount":10},output:{"gas":"mek1000:purified_"+type,"amount":10}
+
+        try {
+            event.custom({"type":"mekanism:reaction",
+                "itemInput":{"item":`superores:super_${type}_ore`},
+                "fluidInput":{"amount":400,"tag":"minecraft:water"},
+                "gasInput":{"amount":2400,"gas":"mek1000:active_aqua_regia"},
+                "energyRequired":50,"duration":6,
+                "itemOutput":{"item":`mek1000:purified_${type}_rawore`,"amount":40}
+            })
+            event.custom({"type":"mekanism:reaction",
+                "itemInput":{"item":`superores:super_deepslate_${type}_ore`},
+                "fluidInput":{"amount":400,"tag":"minecraft:water"},
+                "gasInput":{"amount":2400,"gas":"mek1000:active_aqua_regia"},
+                "energyRequired":50,"duration":6,
+                "itemOutput":{"item":`mek1000:purified_${type}_rawore`,"amount":40}
+            })
+            event.custom({"type":"mekanism:reaction",
+                "itemInput":{"item":`superores:super_${type}_ore`},
+                "fluidInput":{"amount":32,"tag":"minecraft:water"},
+                "gasInput":{"amount":32,"gas":"mekanism:antimatter"},
+                "energyRequired":800,"duration":20,
+                "gasOutput":{"gas":"mek1000:active_"+type,"amount":200}
+            })
+            event.custom({"type":"mekanism:reaction",
+                "itemInput":{"item":`superores:super_deepslate_${type}_ore`},
+                "fluidInput":{"amount":32,"tag":"minecraft:water"},
+                "gasInput":{"amount":32,"gas":"mekanism:antimatter"},
+                "energyRequired":800,"duration":20,
+                "gasOutput":{"gas":"mek1000:active_"+type,"amount":200}
+            })
+        }catch(error){}
+
+        try {
+            event.custom({"type":"mekanism:reaction",
+                "itemInput":{"item":`superores:super_nether_${type}_ore`},
+                "fluidInput":{"amount":400,"tag":"minecraft:water"},
+                "gasInput":{"amount":2400,"gas":"mek1000:active_aqua_regia"},
+                "energyRequired":50,"duration":6,
+                "itemOutput":{"item":`mek1000:purified_${type}_rawore`,"amount":40}
+            })
+            event.custom({"type":"mekanism:reaction",
+                "itemInput":{"item":`superores:super_nether_${type}_ore`},
+                "fluidInput":{"amount":32,"tag":"minecraft:water"},
+                "gasInput":{"amount":32,"gas":"mekanism:antimatter"},
+                "energyRequired":800,"duration":20,
+                "gasOutput":{"gas":"mek1000:active_"+type,"amount":200}
+            })
+        }catch(error){}
+
+        //5..6倍化:
+        event.custom(
+            {type:'mekanism:washing',fluidInput:{'amount':5,'tag':'minecraft:water'},slurryInput:{'amount':1,'slurry':`mek1000:dirty_${type}`},output:{"slurry":`mek1000:clean_${type}`,'amount':10}},
+        )
+        if (mode=="ore") {
+            event.custom({
+                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:compressed_purified_${type}_rawore`}},gasInput:{"amount":9,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mek1000:dirty_compressed_"+ type,"amount":outputs_5*9,"chemicalType":"slurry"}
+            })
+            event.custom({
+                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:purified_${type}_rawore`}},gasInput:{"amount":1,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mek1000:dirty_compressed_"+ type,"amount":outputs_5,"chemicalType":"slurry"}
+            })
+        } else if (mode=="gem") {
+            event.custom({
+                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:compressed_purified_${type}_rawore`}},gasInput:{"amount":4,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mek1000:dirty_"+ type,"amount":outputs_5*4,"chemicalType":"slurry"}
+            })
+            event.custom({
+                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:purified_${type}_rawore`}},gasInput:{"amount":1,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mek1000:dirty_"+ type,"amount":outputs_5,"chemicalType":"slurry"}
+            })
+        } else {
+            event.custom({
+                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:compressed_purified_${type}_rawore`}},gasInput:{"amount":9,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mek1000:dirty_"+ type,"amount":outputs_5*9,"chemicalType":"slurry"}
+            })
+            event.custom({
+                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:purified_${type}_rawore`}},gasInput:{"amount":1,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mek1000:dirty_"+ type,"amount":outputs_5,"chemicalType":"slurry"}
+            })
+        }
+        
+        //6..7倍化:
+        event.custom({"type":"mekanism:reaction",
+            "itemInput":{"item":`mek1000:crystalized_${type}_rawore`},
+            "fluidInput":{"amount":75,"tag":"minecraft:water"},
+            "gasInput":{"amount":600,"gas":"mek1000:active_aqua_regia"},
+            "energyRequired":10,"duration":3,
+            "itemOutput":{"item":`mek1000:compressed_purified_${type}_rawore`,"amount":1}
         })
         event.custom({
             "type": "mekanism:crystallizing",
@@ -69,267 +174,129 @@ onEvent('recipes', event => {
               "gas":"mek1000:purified_"+type
             },
             "output": {
+              "amount": 2,
               "item":`mek1000:crystalized_${type}_rawore`
             }
         })
-        event.custom({"type":"mekanism:reaction",
-            "itemInput":{"tag":`forge:raw_materials/${type}`},
-            "fluidInput":{"amount":25,"tag":"minecraft:water"},
-            "gasInput":{"amount":200,"gas":"mek1000:active_aqua_regia"},
-            "energyRequired":1,"duration":2,
-            "itemOutput":{"item":`mek1000:purified_${type}_rawore`,"amount":2}
+        event.custom({
+            type:"mekanism:chemical_infusing","chemicalType":"gas",leftInput:{"gas":"mek1000:aqua_regia","amount":100},rightInput:{"gas":"mek1000:active_"+type,"amount":10},output:{"gas":"mek1000:purified_"+type,"amount":10}
         })
+    }
+
+    //ore: 鉱石から 6倍化で ×80 , 7倍化で ×720 mbになる. ただし圧縮.
+    advanced_processing_mk2("iron",960,"ore")
+    advanced_processing_mk2("copper",960,"ore")
+    advanced_processing_mk2("gold",960,"ore")
+    advanced_processing_mk2("tin",960,"ore")
+    advanced_processing_mk2("osmium",960,"ore")
+    advanced_processing_mk2("uranium",960,"ore")
+    advanced_processing_mk2("lead",960,"ore")
+    advanced_processing_mk2("iridium",960,"ore") //イリジウムはこのままでは倍化ができないので後述で追加。なお倍率
+    
+    //gem: 鉱石から 6倍化で ×80 , 7倍化で ×320 mbになる.
+    advanced_processing_mk2("redstone",2500,"gem")
+    advanced_processing_mk2("quartz",2500,"gem")
+    advanced_processing_mk2("certus_quartz",2500,"gem")
+    advanced_processing_mk2("fluorite",2500,"gem")
+
+    //特殊: 鉱石から 6倍化で ×80 , 7倍化で ×720 mbになる.
+    advanced_processing_mk2("coal",200,"")
+    advanced_processing_mk2("diamond",200,"")
+    advanced_processing_mk2("emerald",200,"")
+    advanced_processing_mk2("lapis",200,"")
+
+    //イリジウム専用
         event.custom({"type":"mekanism:reaction",
-            "itemInput":{"tag":`forge:ores/${type}`},
-            "fluidInput":{"amount":75,"tag":"minecraft:water"},
+            "itemInput":{"item":'ultimatesolarpanels:iridium_ore'},
+            "fluidInput":{"amount":100,"tag":"minecraft:water"},
             "gasInput":{"amount":600,"gas":"mek1000:active_aqua_regia"},
-            "energyRequired":1,"duration":6,
-            "itemOutput":{"item":`mek1000:purified_${type}_rawore`,"amount":6}
+            "energyRequired":10,"duration":6,
+            "itemOutput":{"item":`mek1000:purified_${type}_rawore`,"amount":8}
         })
         event.custom({"type":"mekanism:reaction",
-            "itemInput":{"tag":`forge:storage_blocks/raw_${type}`},
-            "fluidInput":{"amount":225,"tag":"minecraft:water"},
-            "gasInput":{"amount":1800,"gas":"mek1000:active_aqua_regia"},
-            "energyRequired":1,"duration":18,
-            "itemOutput":{"item":`mek1000:compressed_purified_${type}_rawore`,"amount":2}
+            "itemInput":{"item":'ultimatesolarpanels:iridium_ore'},
+            "fluidInput":{"amount":8,"tag":"minecraft:water"},
+            "gasInput":{"amount":8,"gas":"mekanism:antimatter"},
+            "energyRequired":160,"duration":20,
+            "gasOutput":{"gas":"mek1000:active_"+type,"amount":40}
         })
-        event.custom({"type":"mekanism:reaction",
-            "itemInput":{"item":`mek1000:crystalized_${type}_rawore`},
-            "fluidInput":{"amount":75,"tag":"minecraft:water"},
-            "gasInput":{"amount":600,"gas":"mek1000:active_aqua_regia"},
-            "energyRequired":1,"duration":3,
-            "itemOutput":{"item":`mek1000:compressed_purified_${type}_rawore`,"amount":2}
+
+    //新規鉱石倍加
+    let jumping_processing = (type,output_item,output_1,bridge) => {
+        event.recipes.mekanism.enriching(`${output_1}x ${output_item}`,`mek1000:dirty_dust_${type}`,'1x mekanism:oxygen')
+        event.custom({
+            "type": "mekanism:crushing",
+            "input": {
+                "count": 1,
+                "tag": "mekanism:clumps/"+type
+            },
+            "output": {
+                "count": 1,
+                "item": "mek1000:dirty_dust_"+type
+            }
         })
-        
-        if (type=="iridium") {
+        event.recipes.mekanism.purifying(`2x mek1000:clump_`+type,`mek1000:shard_`+type,'1x mekanism:oxygen')
+        event.custom({
+            "type": "mekanism:injecting",
+            "itemInput": {
+                "ingredient": {
+                "tag": "mekanism:crystals/"+type
+                }
+            },
+            "chemicalInput": {
+                "amount": 1,
+                "gas": "mekanism:hydrogen_chloride"
+            },
+            "output": {
+                "item": "mek1000:shard_"+type
+            }
+        })
+        event.custom({
+                "type": "mekanism:crystallizing",
+                "chemicalType": "slurry",
+                "input": {
+                "amount": 10,
+                "slurry": "mek1000:clean_"+type
+                },
+                "output": {
+                "item": "mek1000:crystal_"+type
+                }
+        })
+        if (bridge) {
             event.custom({
-                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:compressed_purified_${type}_rawore`}},gasInput:{"amount":9,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mek1000:dirty_compressed_"+ type,"amount":7500,"chemicalType":"slurry"}
+                "type": "mekanism:injecting",
+                "itemInput": {
+                    "ingredient": {
+                    "tag": "forge:ores/"+type
+                    }
+                },
+                "chemicalInput": {
+                    "amount": 48,
+                    "gas": "mekanism:hydrogen_chloride"
+                },
+                "output": {
+                    "item": "mek1000:shard_"+type
+                }
             })
-        } else if (type=="redstone"||type=="quartz"||type=="certus_quartz"||type=="fluorite") {
             event.custom({
-                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:compressed_purified_${type}_rawore`}},gasInput:{"amount":4,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mek1000:dirty_"+ type,"amount":10000,"chemicalType":"slurry"}
-            })
-            event.custom({
-                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:purified_${type}_rawore`}},gasInput:{"amount":1,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mek1000:dirty_"+ type,"amount":2500,"chemicalType":"slurry"}
-            })
-        } else if (type=="coal"||type=="diamond"||type=="emerald"||type=="lapis") {
-            event.custom({
-                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:compressed_purified_${type}_rawore`}},gasInput:{"amount":20,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mek1000:dirty_"+ type,"amount":200,"chemicalType":"slurry"}
-            })
-            event.custom({
-                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:purified_${type}_rawore`}},gasInput:{"amount":1,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mek1000:dirty_"+ type,"amount":10,"chemicalType":"slurry"}
-            })
-
-            event.custom( //5-1
-                {type:'mekanism:washing',fluidInput:{'amount':5,'tag':'minecraft:water'},slurryInput:{'amount':1,'slurry':`mek1000:dirty_${type}`},output:{"slurry":`mek1000:clean_${type}`,'amount':10}},
-            )
-            
-
-
-        } else {
-            event.custom({
-                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:compressed_purified_${type}_rawore`}},gasInput:{"amount":9,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mek1000:dirty_compressed_"+ type,"amount":7500,"chemicalType":"slurry"}
-            })
-            event.custom({
-                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":`mek1000:purified_${type}_rawore`}},gasInput:{"amount":1,"gas":"mekanism:sulfuric_acid"},output:{"slurry":"mekanism:dirty_"+ type,"amount":7500,"chemicalType":"slurry"}
+                "type": "mekanism:crushing",
+                "input": {
+                "count": 6,
+                "tag": "forge:ores/"+type
+                },
+                "output": {
+                "count": 1,
+                "item": "mek1000:dirty_dust_"+type
+                }
             })
         }
     }
-    advanced_processing("iron")
-    advanced_processing("copper")
-    advanced_processing("gold")
-    advanced_processing("tin")
-    advanced_processing("osmium")
-    advanced_processing("uranium")
-    advanced_processing("lead")
-    advanced_processing("iridium")
     
-    advanced_processing("redstone")
-    advanced_processing("quartz")
-    advanced_processing("certus_quartz")
-    advanced_processing("fluorite")
+    jumping_processing("lapis","minecraft:lapis_lazuli",12,true)
+    jumping_processing("coal","minecraft:coal",4,true)
 
-    advanced_processing("coal")
-    advanced_processing("diamond")
-    advanced_processing("emerald")
-    advanced_processing("lapis")
-
-    let iridium_multiplifer = 3
-    let type = "iridium"
-    event.custom({"type":"mekanism:reaction",
-        "itemInput":{"item":'ultimatesolarpanels:iridium_ore'},
-        "fluidInput":{"amount":8,"tag":"minecraft:water"},
-        "gasInput":{"amount":8,"gas":"mekanism:antimatter"},
-        "energyRequired":160,"duration":20,
-        "gasOutput":{"gas":"mek1000:active_"+type,"amount":40}
-    })
-    event.custom({"type":"mekanism:reaction",
-        "itemInput":{"item":"superores:super_iridium_ore"},
-        "fluidInput":{"amount":8*iridium_multiplifer,"tag":"minecraft:water"},
-        "gasInput":{"amount":8*iridium_multiplifer,"gas":"mekanism:antimatter"},
-        "energyRequired":160*iridium_multiplifer,"duration":20,
-        "gasOutput":{"gas":"mek1000:active_"+type,"amount":40*iridium_multiplifer}
-    })
-
-    event.custom({"type":"mekanism:reaction",
-        "itemInput":{"item":'ultimatesolarpanels:iridium_ore'},
-        "fluidInput":{"amount":75,"tag":"minecraft:water"},
-        "gasInput":{"amount":600,"gas":"mek1000:active_aqua_regia"},
-        "energyRequired":1,"duration":6,
-        "itemOutput":{"item":`mek1000:purified_${type}_rawore`,"amount":6}
-    })
-    event.custom({"type":"mekanism:reaction",
-        "itemInput":{"item":"superores:super_iridium_ore"},
-        "fluidInput":{"amount":75*iridium_multiplifer,"tag":"minecraft:water"},
-        "gasInput":{"amount":600*iridium_multiplifer,"gas":"mek1000:active_aqua_regia"},
-        "energyRequired":1,"duration":6*iridium_multiplifer,
-        "itemOutput":{"item":`mek1000:purified_${type}_rawore`,"amount":6*iridium_multiplifer}
-    })
-
-    type="lapis"
-    event.custom({
-        "type": "mekanism:crystallizing",
-        "chemicalType": "slurry",
-        "input": {
-        "amount": 10,
-        "slurry": "mek1000:clean_"+type
-        },
-        "output": {
-        "item": "mek1000:crystal_"+type
-        }
-    })
-    event.custom({
-        "type": "mekanism:injecting",
-        "itemInput": {
-            "ingredient": {
-            "tag": "forge:ores/"+type
-            }
-        },
-        "chemicalInput": {
-            "amount": 48,
-            "gas": "mekanism:hydrogen_chloride"
-        },
-        "output": {
-            "item": "mek1000:shard_"+type
-        }
-        })
-    event.custom({
-        "type": "mekanism:injecting",
-        "itemInput": {
-            "ingredient": {
-            "tag": "mekanism:crystals/"+type
-            }
-        },
-        "chemicalInput": {
-            "amount": 1,
-            "gas": "mekanism:hydrogen_chloride"
-        },
-        "output": {
-            "item": "mek1000:shard_"+type
-        }
-        })
-    event.recipes.mekanism.purifying(`2x mek1000:clump_`+type,`mek1000:shard_`+type,'1x mekanism:oxygen')
-    event.custom({
-        "type": "mekanism:crushing",
-        "input": {
-            "count": 1,
-            "tag": "mekanism:clumps/"+type
-        },
-        "output": {
-            "count": 1,
-            "item": "mek1000:dirty_dust_"+type
-        }
-        })
-    event.custom({
-        "type": "mekanism:crushing",
-        "input": {
-        "count": 6,
-        "tag": "forge:ores/"+type
-        },
-        "output": {
-        "count": 1,
-        "item": "mek1000:dirty_dust_"+type
-        }
-    })
-    event.recipes.mekanism.enriching("12x minecraft:lapis_lazuli","mek1000:dirty_dust_lapis",'1x mekanism:oxygen')
-
-    type="coal"
-    event.custom({
-        "type": "mekanism:crystallizing",
-        "chemicalType": "slurry",
-        "input": {
-        "amount": 10,
-        "slurry": "mek1000:clean_"+type
-        },
-        "output": {
-        "item": "mek1000:crystal_"+type
-        }
-    })
-    event.custom({
-        "type": "mekanism:injecting",
-        "itemInput": {
-            "ingredient": {
-            "tag": "mekanism:crystals/"+type
-            }
-        },
-        "chemicalInput": {
-            "amount": 1,
-            "gas": "mekanism:hydrogen_chloride"
-        },
-        "output": {
-            "item": "mek1000:shard_"+type
-        }
-        })
-    event.custom({
-        "type": "mekanism:injecting",
-        "itemInput": {
-            "ingredient": {
-            "tag": "forge:ores/"+type
-            }
-        },
-        "chemicalInput": {
-              "amount": 48,
-              "gas": "mekanism:hydrogen_chloride"
-            },
-            "output": {
-              "item": "mek1000:shard_"+type
-            }
-          })
-    event.recipes.mekanism.purifying(`2x mek1000:clump_`+type,`mek1000:shard_`+type,'1x mekanism:oxygen')
-    event.custom({
-        "type": "mekanism:crushing",
-        "input": {
-            "count": 1,
-            "tag": "mekanism:clumps/"+type
-        },
-        "output": {
-            "count": 1,
-            "item": "mek1000:dirty_dust_"+type
-        }
-        })
-    event.custom({
-        "type": "mekanism:crushing",
-        "input": {
-            "count": 6,
-            "tag": "forge:ores/"+type
-        },
-        "output": {
-            "count": 1,
-            "item": "mek1000:dirty_dust_"+type
-        }
-        })
-    event.custom({
-        "type": "mekanism:enriching",
-        "input": {
-            "count": 1,
-            "tag": "mekanism:dirty_dusts/"+type
-        },
-        "output": {
-            "count": 4,
-            "item": 'minecraft:coal'
-        }
-        })
     
+    //ダイヤ・エメラルド:
     
     event.custom({
         "type": "mekanism:crystallizing",
@@ -356,5 +323,4 @@ onEvent('recipes', event => {
             "item": 'minecraft:emerald'
         }
     })
-
 })
