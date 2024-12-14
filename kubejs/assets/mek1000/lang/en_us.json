@@ -8,9 +8,9 @@
     "gas.mek1000.active_aqua_regia": "Activated Aqua Regia",
     
     "block.mek1000.tin_casing": "Tin Casing",
-    "block.mek1000.tin_casing.tooltip": "Used in 'interesting way'. Do you know it yet?",
+    "tooltip.block.mek1000.tin_casing": "Used in 'interesting way'. Do you know it yet?",
     "block.mek1000.tin_casing_incomplete": "Tin Casing (Incomplete)",
-    "block.mek1000.tin_casing_incomplete.tooltip": "Wow! This looks very yummy!",
+    "tooltip.block.mek1000.tin_casing_incomplete": "Wow! This looks very yummy!",
 
     "item.mek1000.ldpe": "LDPE Wrapping Film",
 
