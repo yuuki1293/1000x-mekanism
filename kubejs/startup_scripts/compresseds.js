@@ -38,6 +38,8 @@ onEvent('item.registry', event => {
             .texture(`mekanism:item/clump_${type}`)
             .rarity("epic")
             .glow(true)
+            .barWidth(itemstack => 13)
+            .barColor(itemstack => Color.AQUA)
         event // 圧縮欠片
             .create(`mek1000:${type}_shard_20`)
             .displayName(`20x ${type} shard`)
@@ -46,6 +48,8 @@ onEvent('item.registry', event => {
             .texture(`mekanism:item/shard_${type}`)
             .rarity("epic")
             .glow(true)
+            .barWidth(itemstack => 13)
+            .barColor(itemstack => Color.AQUA)
         event // 圧縮結晶
             .create(`mek1000:${type}_crystal_20`)
             .displayName(`20x ${type} crystal`)
@@ -53,7 +57,9 @@ onEvent('item.registry', event => {
             .maxStackSize(64)
             .texture(`mekanism:item/crystal_${type}`)
             .rarity("epic")
-            .glow(true)        
+            .glow(true)
+            .barWidth(itemstack => 13)
+            .barColor(itemstack => Color.AQUA)
     })  
 
     //イリジウム用
@@ -90,6 +96,8 @@ onEvent('item.registry', event => {
         .texture(`kubejs:item/clump_iridium`)
         .rarity("epic")
         .glow(true)
+        .barWidth(itemstack => 13)
+        .barColor(itemstack => Color.AQUA)
     event // 圧縮欠片
         .create(`mek1000:iridium_shard_20`)
         .displayName(`20x iridium shard`)
@@ -98,6 +106,8 @@ onEvent('item.registry', event => {
         .texture(`kubejs:item/shard_iridium`)
         .rarity("epic")
         .glow(true)
+        .barWidth(itemstack => 13)
+        .barColor(itemstack => Color.AQUA)
     event // 圧縮結晶
         .create(`mek1000:iridium_crystal_20`)
         .displayName(`Hello.`)
@@ -105,7 +115,9 @@ onEvent('item.registry', event => {
         .maxStackSize(64)
         .texture(`kubejs:item/crystal_iridium`)
         .rarity("epic")
-        .glow(true)        
+        .glow(true)       
+        .barWidth(itemstack => 13)
+        .barColor(itemstack => Color.AQUA) 
 })
 // {"name": ,"color":}
 onEvent('mekanism.slurry.registry', event => {
