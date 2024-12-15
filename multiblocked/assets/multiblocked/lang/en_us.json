@@ -14,6 +14,7 @@
     "block.mek1000.perfect_gas_input":"Perfect Gas Input",
     "block.mek1000.fluid_input":"Fluid Input",
     "block.mek1000.singurarity_generator":"Singurarity Generator",
+    "block.mek1000.hyper_refinery":"Hyper Ore Refinery",
     "multiblocked.recipe_map.sml_drill_s":"SML Drill S",
     "multiblocked.recipe_map.sml_drill_m":"SML Drill M",
     "multiblocked.recipe_map.sml_drill_l":"SML Drill L",
@@ -21,6 +22,6 @@
     "multiblocked.recipe_map.large_digital_assembly_table":"Large Digital Assembly Table",
     "multiblocked.recipe_map.generator":"Generator",
     "multiblocked.recipe_map.singurarity_generator":"Singurarity Generator",
-    "multiblocked.recipe_map.fusion":"核融合炉",
+    "multiblocked.recipe_map.fusion":"Fusion Reactor Crafting",
     "multiblocked.recipe_map.cobble":"Cobble Generator"
 }

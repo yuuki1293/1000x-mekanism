@@ -205,7 +205,7 @@ onEvent('recipes', event => {
     advanced_processing_mk2("fluorite",2500,"gem",true,true,false)
 
     //特殊: 鉱石から 6倍化で ×80 , 7倍化で ×400 mbになる.
-    //補足: 当初は720だったが、ラピスラズリ34万倍化が開始されてしまったのでやむを得ず却下。
+    //補足: 当初は720だったが、ラピスラズリ34万倍化が開始されてしまったのでやむを得ずナーフ.
     advanced_processing_mk2("coal",200,"",true,true,false)
     advanced_processing_mk2("diamond",200,"",true,true,false)
     advanced_processing_mk2("emerald",200,"",true,true,false)
