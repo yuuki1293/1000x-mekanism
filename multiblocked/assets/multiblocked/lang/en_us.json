@@ -20,6 +20,8 @@
     "multiblocked.recipe_map.sml_drill_l":"SML Drill L",
     "multiblocked.recipe_map.infinity_fusion_reactor":"Infinity Fusion Reactor",
     "multiblocked.recipe_map.large_digital_assembly_table":"Large Digital Assembly Table",
+    "multiblocked.recipe_map.large_ore_refinery":"Hyper Ore Refinery System",
+    "multiblocked.recipe_map.hyper_refinery":"Hyper Ore Refinery System",
     "multiblocked.recipe_map.generator":"Generator",
     "multiblocked.recipe_map.singurarity_generator":"Singurarity Generator",
     "multiblocked.recipe_map.fusion":"Fusion Reactor Crafting",

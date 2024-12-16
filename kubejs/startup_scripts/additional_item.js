@@ -14,7 +14,6 @@ onEvent('item.registry', event => {
                 
             }
         })
-        .group("mek1000_2")
 })
 onEvent('mekanism.infuse_type.registry', event => {
     event.create('mek1000:sunnalium').color(0xffff00)

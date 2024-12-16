@@ -20,6 +20,8 @@
     "multiblocked.recipe_map.sml_drill_l":"SMLドリルL",
     "multiblocked.recipe_map.infinity_fusion_reactor":"インフィニティ融合炉",
     "multiblocked.recipe_map.large_digital_assembly_table":"大型電子組立機",
+    "multiblocked.recipe_map.large_ore_refinery":"高度鉱石精製",
+    "multiblocked.recipe_map.hyper_refinery":"Hyper Ore Refinery System",
     "multiblocked.recipe_map.generator":"合成ガス発電機での発電",
     "multiblocked.recipe_map.singurarity_generator":"シンギュラリティー製造装置",
     "multiblocked.recipe_map.fusion":"核融合炉",

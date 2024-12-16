@@ -100,3 +100,7 @@ onEvent(`mekanism.slurry.registry`, event => {
     event.create(`mek1000:dirty_emerald`).texture("kubejs:slurry/dirty").color(0x22f050)
     event.create(`mek1000:clean_emerald`).texture("kubejs:slurry/clean").color(0x22f050)
 })
+
+onEvent('fluid.registry', event => {
+    event.create('mek1000:liquid_antimatter').bucketColor(0x9373ff).thinTexture(0x9373ff)
+})
