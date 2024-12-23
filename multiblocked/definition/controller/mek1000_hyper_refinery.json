@@ -1,13 +1,13 @@
 {
   "version": 3,
   "location": "mek1000:hyper_refinery",
-  "ui": "test_orerefinery2.mbdui",
+  "ui": "assets/multiblocked/refinery.mbdui",
   "traits": {
     "recipe_progress": {
       "cIO": 2,
       "gIO": 2,
       "mbdIO": 2,
-      "slotName": "p",
+      "slotName": "progress",
       "x": 5,
       "y": 5,
       "width": 60,
@@ -19,17 +19,8 @@
       {
         "cIO": 1,
         "gIO": 1,
-        "mIO": 2,
-        "slotName": "o1",
-        "x": 5,
-        "y": 5,
-        "autoIO": false
-      },
-      {
-        "cIO": 1,
-        "gIO": 1,
-        "mIO": 2,
-        "slotName": "o2",
+        "mIO": 1,
+        "slotName": "output",
         "x": 5,
         "y": 5,
         "autoIO": false
@@ -37,10 +28,10 @@
       {
         "cIO": 0,
         "gIO": 2,
-        "mIO": 2,
-        "slotName": "i",
-        "x": 5,
-        "y": 5,
+        "mIO": 0,
+        "slotName": "input",
+        "x": 13,
+        "y": 6,
         "autoIO": false
       }
     ],
@@ -48,25 +39,22 @@
       {
         "cIO": 2,
         "gIO": 2,
-        "mIO": 2,
-        "slotName": "w",
+        "mIO": 0,
+        "slotName": "fluid",
         "x": 5,
         "y": 5,
         "autoIO": false,
         "tC": 2147483647,
         "w": 18,
         "h": 18,
-        "fillDir": "DOWN_TO_UP",
-        "valid": [
-          "\"{Amount:1000,FluidName:\\\"minecraft:water\\\"}\""
-        ]
+        "fillDir": "DOWN_TO_UP"
       }
     ],
     "forge_energy": {
       "cIO": 0,
       "gIO": 0,
-      "mbdIO": 2,
-      "slotName": "e",
+      "mbdIO": 0,
+      "slotName": "energy",
       "x": 5,
       "y": 5,
       "width": 60,
@@ -76,19 +64,7 @@
       "capacity": 2147483647,
       "maxReceive": 2147483647,
       "maxExtract": 500
-    },
-    "mek_gas": [
-      {
-        "cIO": 0,
-        "gIO": 0,
-        "mIO": 2,
-        "slotName": "g",
-        "x": 5,
-        "y": 5,
-        "autoIO": false,
-        "tankCapability": 2147483647
-      }
-    ]
+    }
   },
   "properties": {
     "rotationState": "ALL",

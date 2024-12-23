@@ -110,8 +110,8 @@ onEvent('item.registry', event => {
         .barColor(itemstack => Color.AQUA)
     event // 圧縮結晶
         .create(`mek1000:iridium_crystal_20`)
-        .displayName(`Hello.`)
-        .tooltip('')
+        .displayName(`20x iridium crystal`)
+        .tooltip('Hello.')
         .maxStackSize(64)
         .texture(`kubejs:item/crystal_iridium`)
         .rarity("epic")

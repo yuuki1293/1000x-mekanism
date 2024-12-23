@@ -8,11 +8,15 @@
     "gas.mek1000.active_aqua_regia": "Activated Aqua Regia",
     
     "block.mek1000.tin_casing": "Tin Casing",
-    "tooltip.block.mek1000.tin_casing": "Used in 'interesting way'. Do you know it yet?",
+    "block.mek1000.tin_casing.tooltip": "Used in 'interesting way'. Do you know it yet?",
     "block.mek1000.tin_casing_incomplete": "Tin Casing (Incomplete)",
-    "tooltip.block.mek1000.tin_casing_incomplete": "Wow! This looks very yummy!",
+    "block.mek1000.tin_casing_incomplete.tooltip": "Wow! This looks very yummy!",
 
     "item.mek1000.ldpe": "LDPE Wrapping Film",
+    "item.mek1000.stray_cat": "Stray Cat's Bressing",
+    "item.mek1000.tiny_antimatter": "Tiny Antimatter Pellet",
+    
+    "effect.mek1000.straycat_bressing": "Bressing from StrayCat",
 
     "gas.mek1000valinium.anti_hydrogen": "Anti-Hydrogen Gas",
     "gas.mek1000valinium.anti_hydride_valine": "Valine Anti-Hydride Gas (VAH)",

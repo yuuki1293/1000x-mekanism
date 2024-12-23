@@ -12,6 +12,10 @@
     "block.mek1000.tin_casing_incomplete.tooltip": "LDPEフィルムで覆って",
     
     "item.mek1000.ldpe": "LDPEシート",
+    "item.mek1000.stray_cat": "迷いネコの祝福",
+    "item.mek1000.tiny_antimatter": "小分けにされた反物質",
+
+    "effect.mek1000.straycat_bressing": "迷いネコの祝福",
 
     "gas.mek1000valinium.anti_hydrogen": "反水素ガス",
     "gas.mek1000valinium.anti_hydride_valine": "反水素化バリン3gガス (VAH)",

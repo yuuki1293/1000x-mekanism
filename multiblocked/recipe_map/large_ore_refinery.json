@@ -2,5 +2,53 @@
   "name": "large_ore_refinery",
   "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
   "fuelTexture": "multiblocked:textures/gui/progress_bar_fuel.png",
-  "recipes": []
+  "recipes": [
+    {
+      "uid": "mek1000:refinery_iron",
+      "duration": 20,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "tag": "forge:ores/iron"
+            },
+            "chance": 1.0
+          }
+        ],
+        "fluid": [
+          {
+            "content": {
+              "fluid": "mekanism:sulfuric_acid",
+              "amount": 10
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 8,
+              "ingredient": {
+                "item": "mek1000:iron_crystal_20"
+              }
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 11200000,
+            "chance": 1.0
+          }
+        ]
+      }
+    }
+  ]
 }
