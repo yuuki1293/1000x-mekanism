@@ -97,7 +97,7 @@ onEvent('recipes', event => {
     */
 
     // hidden recipe
-    event.recipes.mekanism.combining(`20x mek1000:stray_cat`, `mek1000:tiny_antimatter`, 'minecraft:amethyst_shard').id("mek1000:packcat")
+    event.recipes.mekanism.combining(`2x mek1000:stray_cat`, `mek1000:tiny_antimatter`, 'minecraft:amethyst_shard').id("mek1000:packcat")
     event.custom({
         "type": "mekanism:oxidizing",
         "input": {
