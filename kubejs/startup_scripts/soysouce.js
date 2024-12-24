@@ -36,6 +36,7 @@ onEvent('item.registry', event => {
 			food
 				.hunger(6)
 				.saturation(4)
+				.fastToEat()
 		})
 })
 

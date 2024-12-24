@@ -1,0 +1,25 @@
+{
+    "language.name": "日本語",
+    "language.code": "ja_jp",
+
+    "gas.mek1000.aqua_regia": "非活性化王水",
+    "gas.mek1000.activated_redstone": "活性化レッドストーンガス",
+    "gas.mek1000.active_aqua_regia": "王水",
+
+    "block.mek1000.tin_casing": "錫のケーシング",
+    "block.mek1000.tin_casing.tooltip": "特殊な機械に使われる (＝ほぼ使われない)",
+    "block.mek1000.tin_casing_incomplete": "未包装の錫のケーシング",
+    "block.mek1000.tin_casing_incomplete.tooltip": "LDPEフィルムで覆って",
+    
+    "item.mek1000.ldpe": "LDPEシート",
+    "item.mek1000.stray_cat": "迷いネコの祝福",
+    "item.mek1000.tiny_antimatter": "小分けにされた反物質",
+
+    "effect.mek1000.straycat_bressing": "迷いネコの祝福",
+
+    "gas.mek1000valinium.anti_hydrogen": "反水素ガス",
+    "gas.mek1000valinium.anti_hydride_valine": "反水素化バリン3gガス (VAH)",
+    "gas.mek1000valinium.valinium": "バリニウムガス (活性化VAH)",
+
+    "block.mek1000valinium.valine_block": "バリニウムブロック"
+}
