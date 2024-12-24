@@ -15,6 +15,7 @@
     "block.mek1000.fluid_input":"Fluid Input",
     "block.mek1000.singurarity_generator":"Singurarity Generator",
     "block.mek1000.hyper_refinery":"Hyper Ore Refinery",
+    "block.mek1000.greenhouse":"GreenHouse",
     "multiblocked.recipe_map.sml_drill_s":"SML Drill S",
     "multiblocked.recipe_map.sml_drill_m":"SML Drill M",
     "multiblocked.recipe_map.sml_drill_l":"SML Drill L",
@@ -25,5 +26,6 @@
     "multiblocked.recipe_map.generator":"Generator",
     "multiblocked.recipe_map.singurarity_generator":"Singurarity Generator",
     "multiblocked.recipe_map.fusion":"Fusion Reactor Crafting",
-    "multiblocked.recipe_map.cobble":"Cobble Generator"
+    "multiblocked.recipe_map.cobble":"Cobble Generator",
+    "multiblocked.recipe_map.greenhouse":"GreenHouse"
 }

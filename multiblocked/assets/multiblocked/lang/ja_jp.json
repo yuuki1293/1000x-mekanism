@@ -15,6 +15,7 @@
     "block.mek1000.fluid_input":"液体入力ハッチ",
     "block.mek1000.singurarity_generator":"シンギュラリティー製造装置",
     "block.mek1000.hyper_refinery":"高度鉱石精製炉",
+    "block.mek1000.greenhouse":"温室コントローラー",
     "multiblocked.recipe_map.sml_drill_s":"SMLドリルS",
     "multiblocked.recipe_map.sml_drill_m":"SMLドリルM",
     "multiblocked.recipe_map.sml_drill_l":"SMLドリルL",
@@ -25,5 +26,6 @@
     "multiblocked.recipe_map.generator":"合成ガス発電機での発電",
     "multiblocked.recipe_map.singurarity_generator":"シンギュラリティー製造装置",
     "multiblocked.recipe_map.fusion":"核融合炉",
-    "multiblocked.recipe_map.cobble":"強化丸石製造機"
+    "multiblocked.recipe_map.cobble":"強化丸石製造機",
+    "multiblocked.recipe_map.greenhouse":"温室の促成栽培"
 }

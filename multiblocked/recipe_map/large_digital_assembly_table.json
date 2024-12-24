@@ -277,6 +277,280 @@
       }
     },
     {
+      "uid": "destroyer",
+      "duration": 1000,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:energy_cataryst"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "cataryst_0",
+            "uiName": "cataryst_0"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:item_cataryst"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "cataryst_1",
+            "uiName": "cataryst_1"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:infinity_ingot"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "cataryst_2",
+            "uiName": "cataryst_2"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:fluid_cataryst"
+              }
+            },
+            "chance": 0.0,
+            "slotName": "cataryst_3",
+            "uiName": "cataryst_3"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:sml_drill_l"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_0",
+            "uiName": "item_0"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "compactmekanismmachines:compact_fission_reactor"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_1",
+            "uiName": "item_1"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "compactmekanismmachines:compact_fission_reactor"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_2",
+            "uiName": "item_2"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:sml_drill_l"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_3",
+            "uiName": "item_3"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekaevolution:infinite_control_circuit"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_4",
+            "uiName": "item_4"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "quarryplus:quarry"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_5",
+            "uiName": "item_5"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "quarryplus:quarry"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_6",
+            "uiName": "item_6"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekaevolution:infinite_control_circuit"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_7",
+            "uiName": "item_7"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekaevolution:infinite_control_circuit"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_8",
+            "uiName": "item_8"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "quarryplus:quarry"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_9",
+            "uiName": "item_9"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "quarryplus:quarry"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_10",
+            "uiName": "item_10"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mekaevolution:infinite_control_circuit"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_11",
+            "uiName": "item_11"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:sml_drill_l"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_12",
+            "uiName": "item_12"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "quarryplus:replacer"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_13",
+            "uiName": "item_13"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "quarryplus:pump_plus"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_14",
+            "uiName": "item_14"
+          },
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "mek1000:sml_drill_l"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "item_15",
+            "uiName": "item_15"
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "quarryplus:adv_quarry"
+              }
+            },
+            "chance": 1.0,
+            "slotName": "output",
+            "uiName": "output"
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 2147483647,
+            "chance": 1.0,
+            "slotName": "energy",
+            "uiName": "energy"
+          }
+        ]
+      }
+    },
+    {
       "uid": "fusion_casing_4",
       "duration": 1000,
       "inputs": {

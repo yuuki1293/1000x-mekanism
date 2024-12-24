@@ -8,7 +8,7 @@ onEvent('recipes', event => {
     event.remove({ id: `ultimatesolarpanels:hybrid_solar_panel_rcp`})
     event.remove({ id: `ultimatesolarpanels:riircp`})
 
-    event.recipes.mekanismMetallurgicInfusing(`10x ultimatesolarpanels:pile_of_sunnarium`,'10x ultimatesolarpanels:iridium', '100x mekanism:gold')
+    event.recipes.mekanismMetallurgicInfusing(`16x ultimatesolarpanels:pile_of_sunnarium`,'16x ultimatesolarpanels:iridium', '100x mekanism:gold')
     event.recipes.mekanism.compressing('ultimatesolarpanels:enriched_sunnarium',`4x ultimatesolarpanels:sunnarium`,`1x mekanism:osmium`)
     event.recipes.mekanism.combining(`ultimatesolarpanels:ender_quantum_component`,'16x ultimatesolarpanels:iridium',`4x ultimatesolarpanels:enriched_sunnarium`)
     event.recipes.mekanismMetallurgicInfusing(`ultimatesolarpanels:quantum_solar_array`,'16x ultimatesolarpanels:ultimate_hybrid_solar_array', '100x mekanism:tin')
