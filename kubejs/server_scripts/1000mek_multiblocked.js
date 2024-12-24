@@ -185,6 +185,15 @@ event.shaped('multiblocked:item_input',[
 e:'#forge:chests',
 t:'mek1000:reinforced_steel_casing'
 })
+event.shaped('multiblocked:fluid_input',[
+  'e  ',
+  't  ',
+  '   '
+],{
+e:'ae2:sky_stone_tank',
+t:'mek1000:reinforced_steel_casing'
+})
+
 event.shaped('multiblocked:item_output',[
   't  ',
   'e  ',
@@ -234,6 +243,15 @@ event.shaped('mek1000:cobble_generator',[
 e:'mekanism:enriched_tin',
 t:'mek1000:illuminate_alloy',
 f:'mek1000:uranite_flux_casing'
+})
+event.shaped('mek1000:greenhouse',[
+  'ete',
+  'tft',
+  'ete'
+],{
+e:'mekanism:enriched_tin',
+t:'mekanism:ultimate_control_circuit',
+f:'mek1000:reinforced_steel_casing'
 })
 event.custom({
   "type": "mekanism:chemical_infusing",
