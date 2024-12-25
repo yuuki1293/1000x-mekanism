@@ -29,4 +29,13 @@ onEvent("item.tooltip", tooltip => {
 		text.add(2, Text.of('なんだか心地よい。').yellow())
 		  
 	})
+	tooltip.addAdvanced("multiblocked:multiblock_builder", (item, advanced, text) => {
+		text.add(1, Text.of("AutoBuild *see jei to get more info").yellow())
+		text.add(2, Text.of('自動組み立て ※詳しくはJEIをみてね').yellow())
+		  
+	})
 })
+
+onEvent('jei.information', event => {
+	event.add("multiblocked:multiblock_builder", ['インベントリに「すべての」（⇦重要）材料を持った状態でコントローラーをしゃがみながらこのアイテムでクリックすると、自動で建築されます。', '当然、あまりにも分量が多い場合には使用できません。','Sneak+Use to controller block, to build multiblock using components from your inventory.', "Cannot use if you don't have enough components, or enough inventory storage."])
+  })
