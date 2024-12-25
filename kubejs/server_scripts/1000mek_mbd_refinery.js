@@ -1,6 +1,18 @@
 onEvent('recipes', event => {
     // additional item & fluids
 
+
+    // auto builder
+    event.shaped(`multiblocked:multiblock_builder`,[
+        'tet',
+        ' w ',
+        'tet'
+    ],{
+        t:`mekanism:block_tin`,
+        e:`mekanism:elite_control_circuit`,
+        w:`mekanismadditions:walkie_talkie`
+    }).id(`mek1000:mbd_builder`)
+
     // tin casing craft
     event.shaped(`mek1000:tin_casing_incomplete`,[
         'tgt',

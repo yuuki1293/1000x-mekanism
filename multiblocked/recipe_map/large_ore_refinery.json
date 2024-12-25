@@ -14,7 +14,8 @@
               "count": 1,
               "tag": "forge:ores/iron"
             },
-            "chance": 1.0
+            "chance": 1.0,
+            "slotName": "input"
           }
         ],
         "fluid": [
@@ -23,7 +24,8 @@
               "fluid": "mekanism:sulfuric_acid",
               "amount": 10
             },
-            "chance": 1.0
+            "chance": 1.0,
+            "slotName": "fluid"
           }
         ]
       },
@@ -37,7 +39,8 @@
                 "item": "mek1000:iron_crystal_20"
               }
             },
-            "chance": 1.0
+            "chance": 1.0,
+            "slotName": "output"
           }
         ]
       },
@@ -45,7 +48,8 @@
         "forge_energy": [
           {
             "content": 11200000,
-            "chance": 1.0
+            "chance": 1.0,
+            "slotName": "energy"
           }
         ]
       }
