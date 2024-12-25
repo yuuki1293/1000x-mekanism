@@ -11,7 +11,7 @@
           {
             "content": {
               "type": "mek1000:dvt",
-              "amount": 1
+              "amount": 200
             },
             "chance": 1.0
           }
@@ -57,7 +57,7 @@
           {
             "content": {
               "type": "mek1000:ultimate_valine",
-              "amount": 1
+              "amount": 1000
             },
             "chance": 1.0
           }
