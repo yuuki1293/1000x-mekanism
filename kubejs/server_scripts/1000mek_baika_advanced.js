@@ -25,7 +25,14 @@ onEvent('recipes', event => {
         "gasInput":{"amount":9,"gas":"mekanism:steam"},
         "fluidInput":{"amount":9,"tag": "minecraft:water"},
         "energyRequired":1,"duration":8,
-        "gasOutput":{"gas":"mek1000:activated_redstone","amount":1}
+        "gasOutput":{"gas":"mek1000:activated_redstone","amount":9}
+    })
+    event.custom({"type":"mekanism:reaction",
+        "itemInput":{"item":"minecraft:redstone_block","amount":1},
+        "gasInput":{"amount":9,"gas":"mek1000:activated_redstone"},
+        "fluidInput":{"amount":9,"tag": "minecraft:water"},
+        "energyRequired":1,"duration":8,
+        "gasOutput":{"gas":"mek1000:activated_redstone","amount":24}
     })
     event.custom({"type":"mekanism:reaction",
         "itemInput":{"item":"mekanism:shard_iron"},
