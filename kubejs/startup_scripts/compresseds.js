@@ -139,7 +139,7 @@ onEvent('mekanism.slurry.registry', event => {
     event.create('mek1000:clean_compressed_lead').texture("kubejs:slurry/clean").color(0xf0f8ff)
     event.create('mek1000:clean_compressed_uranium').texture("kubejs:slurry/clean").color(0xf0f8ff)
 
-    //追加パック2 圧縮イリジウムパック（両方）:
+    //追加パック2 圧縮イリジウムパック（両方）
     event.create('mek1000:dirty_compressed_iridium').texture("kubejs:slurry/dirty").color(0xf0f8ff)
     event.create('mek1000:clean_compressed_iridium').texture("kubejs:slurry/clean").color(0xf0f8ff)
 
