@@ -99,6 +99,14 @@ onEvent(`mekanism.slurry.registry`, event => {
     event.create(`mek1000:clean_lapis`).texture("kubejs:slurry/clean").color(0x3333f0)
     event.create(`mek1000:dirty_emerald`).texture("kubejs:slurry/dirty").color(0x22f050)
     event.create(`mek1000:clean_emerald`).texture("kubejs:slurry/clean").color(0x22f050)
+
+    let types = [ // ["name",0x color]
+        ["iron",0xffff91],["copper",0xffff91],["gold",0xffdedb],["osmium",0x63cedb],["tin",0xddddea],["lead",0xffff91],["uranium",0xffff91],["iridium",0xf3ff80],
+        ["redstone",0xff2020],["quartz",0xffc0b1],["certus_quartz",0xb1c0ff],["fluorite",0xffb0ff],
+        ["coal",0x444444],["lapis",0x4444ff],["diamond",0x33b1ff],["emerald",0x33ff61]]
+    types.forEach(type=>{
+        event.create(`mek1000:prec_${type[0]}`).texture("kubejs:slurry/clean").color(type[1]).displayName(`precipitated ${type[0]}`)
+    })
 })
 
 onEvent('fluid.registry', event => {

@@ -79,13 +79,15 @@ onEvent('recipes', event => {
             ],{
                 c:`mek1000:${type}_crystal_20`
             }).id(`mek1000:${type}_disassembling_20to1`)
-        event.shaped(`20x ${item_9}`,[
-                'ccc',
-                'ccc',
-                'ccc'
-            ],{
-                c:`mek1000:${type}_crystal_20`
-            }).id(`mek1000:${type}_disassembling_20to9`)
+        if ((typeof item_9)!="undefined") {
+            event.shaped(`20x ${item_9}`,[
+                    'ccc',
+                    'ccc',
+                    'ccc'
+                ],{
+                    c:`mek1000:${type}_crystal_20`
+                }).id(`mek1000:${type}_disassembling_20to9`)
+        }
     }
     
     crystal_disassemble_20("iron","mekanism:crystal_iron","mek1000:compressed_iron_crystal")
@@ -96,17 +98,6 @@ onEvent('recipes', event => {
     crystal_disassemble_20("uranium","mekanism:crystal_uranium","mek1000:compressed_uranium_crystal")
     crystal_disassemble_20("lead","mekanism:crystal_lead","mek1000:compressed_lead_crystal")
     crystal_disassemble_20("iridium","kubejs:crystal_iridium","mek1000:compressed_iridium_crystal")
-    /*
-    crystal_disassemble_20("redstone",2500,"gem",true,true,false)
-    crystal_disassemble_20("quartz",2500,"gem",false,false,true)
-    crystal_disassemble_20("certus_quartz",2500,"gem",false,false,false)
-    crystal_disassemble_20("fluorite",2500,"gem",true,true,false)
-
-    crystal_disassemble_20("coal",200,"",true,true,false)
-    crystal_disassemble_20("diamond",200,"",true,true,false)
-    crystal_disassemble_20("emerald",200,"",true,true,false)
-    crystal_disassemble_20("lapis",200,"",false,false,false)
-    */
 
     // hidden recipe
     event.recipes.mekanism.combining(`2x mek1000:stray_cat`, `mek1000:tiny_antimatter`, 'minecraft:amethyst_shard').id("mek1000:packcat")
@@ -122,4 +113,55 @@ onEvent('recipes', event => {
           "amount": 10000
         },
     }).id("mek1000:oxcat")
+
+
+    // Yeah
+
+    /**
+     * @param {String} type レシピ登録用
+     * @param {String} normal いつもの懸濁液
+     * @param {String} washed 追加された懸濁液
+     * @param {String} crystal 結晶
+     * @param {Number} amount 結晶の数
+     * @param {Number} amount_s 懸濁液の量
+     */
+    let crystalize_prec = (type,normal,washed,crystal,amount,amount_s) => {
+        event.custom(
+            {type:'mekanism:washing',fluidInput:{'amount':300,'tag':'minecraft:water'},slurryInput:{'amount':200,'slurry':`${normal}`},output:{"slurry":`${washed}`,'amount':1}},
+        ).id(`mek1000:doublewashing_${type}`)
+        event.custom({
+            "type": "mekanism:crystallizing",
+            "chemicalType": "slurry",
+            "input": {
+              "amount": amount_s,
+              "slurry": washed
+            },
+            "output": {
+              "amount": amount,
+              "item": crystal
+            }
+        })
+    }
+    
+    crystalize_prec("fe","mekanism:clean_iron","mek1000:prec_iron","mekanism:crystal_iron",20,20)
+    crystalize_prec("cu","mekanism:clean_copper","mek1000:prec_copper","mekanism:crystal_copper",20,20)
+    crystalize_prec("au","mekanism:clean_gold","mek1000:prec_gold","mekanism:crystal_gold",20,20)
+    crystalize_prec("sn","mekanism:clean_tin","mek1000:prec_tin","mekanism:crystal_tin",20,20)
+    crystalize_prec("os","mekanism:clean_osmium","mek1000:prec_osmium","mekanism:crystal_osmium",20,20)
+    crystalize_prec("ur","mekanism:clean_uranium","mek1000:prec_uranium","mekanism:crystal_uranium",20,20)
+    crystalize_prec("pb","mekanism:clean_lead","mek1000:prec_lead","mekanism:crystal_lead",20,20)
+    crystalize_prec("ir","kubejs:clean_iridium","mek1000:prec_iridium","kubejs:crystal_iridium",20,20)
+
+    crystalize_prec("rs","mek1000:clean_redstone","mek1000:prec_redstone","mek1000:crystal_redstone",20,20)
+    crystalize_prec("qz","mek1000:clean_quartz","mek1000:prec_quartz","mek1000:crystal_quartz",20,20)
+    crystalize_prec("cq","mek1000:clean_certus_quartz","mek1000:prec_certus_quartz","mek1000:crystal_certus_quartz",20,20)
+    crystalize_prec("ft","mek1000:clean_fluorite","mek1000:prec_fluorite","mek1000:crystal_fluorite",20,20)
+
+    crystalize_prec("la","mek1000:clean_lapis","mek1000:prec_lapis","mek1000:crystal_lapis",40,2)
+    crystalize_prec("co","mek1000:clean_coal","mek1000:prec_coal","mek1000:crystal_coal",40,2)
+
+    crystalize_prec("di","mek1000:clean_diamond","mek1000:prec_diamond","minecraft:diamond",40,2)
+    crystalize_prec("em","mek1000:clean_emerald","mek1000:prec_emerald","minecraft:emerald",40,2)
+
+    
 })
