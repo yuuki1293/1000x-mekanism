@@ -5,7 +5,7 @@ onEvent('item.registry', event => {
     
     
     types.forEach(type => {
-        event // 圧縮凝塊
+        event // 圧縮凝塊:
             .create(`mek1000:compressed_${type}_clump`)
             .displayName(`compressed ${type} clump`)
             .tooltip('えっいいんですか？圧縮しちゃって')
@@ -13,7 +13,7 @@ onEvent('item.registry', event => {
             .texture(`mekanism:item/clump_${type}`)
             .rarity("uncommon")
             .glow(true)
-        event // 圧縮欠片
+        event // 圧縮欠片:
             .create(`mek1000:compressed_${type}_shard`)
             .displayName(`compressed ${type} shard`)
             .tooltip('圧縮なのは 義務なんです。')
@@ -21,7 +21,7 @@ onEvent('item.registry', event => {
             .texture(`mekanism:item/shard_${type}`)
             .rarity("uncommon")
             .glow(true)
-        event // 圧縮結晶
+        event // 圧縮結晶:
             .create(`mek1000:compressed_${type}_crystal`)
             .displayName(`compressed ${type} crystal`)
             .tooltip('圧縮された別れの歌')
@@ -30,7 +30,7 @@ onEvent('item.registry', event => {
             .rarity("uncommon")
             .glow(true)        
 
-        event // 圧縮凝塊
+        event // 圧縮凝塊:
             .create(`mek1000:${type}_clump_20`)
             .displayName(`20x ${type} clump`)
             .tooltip('うわーん製錬炉のバカー!(>_<)')
@@ -40,7 +40,7 @@ onEvent('item.registry', event => {
             .glow(true)
             .barWidth(itemstack => 13)
             .barColor(itemstack => Color.AQUA)
-        event // 圧縮欠片
+        event // 圧縮欠片:
             .create(`mek1000:${type}_shard_20`)
             .displayName(`20x ${type} shard`)
             .tooltip('20, 19, 18, 17,...')
@@ -50,7 +50,7 @@ onEvent('item.registry', event => {
             .glow(true)
             .barWidth(itemstack => 13)
             .barColor(itemstack => Color.AQUA)
-        event // 圧縮結晶
+        event // 圧縮結晶:
             .create(`mek1000:${type}_crystal_20`)
             .displayName(`20x ${type} crystal`)
             .tooltip('20倍圧縮だぜ! 唐突ですまんな!')
@@ -62,8 +62,8 @@ onEvent('item.registry', event => {
             .barColor(itemstack => Color.AQUA)
     })  
 
-    //イリジウム用
-    event // 凝塊
+    //イリジウム用:
+    event // 凝塊:
         .create(`mek1000:compressed_iridium_clump`)
         .displayName(`compressed iridium clump`)
         .tooltip('圧縮して... なにするの？')
@@ -71,7 +71,7 @@ onEvent('item.registry', event => {
         .texture(`kubejs:item/clump_iridium`)
         .rarity("uncommon")
         .glow(true)
-    event // 欠片
+    event // 欠片:
         .create(`mek1000:compressed_iridium_shard`)
         .displayName(`compressed iridium shard`)
         .tooltip('イリジウムって結構高いんだよ...?')
@@ -79,7 +79,7 @@ onEvent('item.registry', event => {
         .texture(`kubejs:item/shard_iridium`)
         .rarity("uncommon")
         .glow(true)
-    event // 結晶
+    event // 結晶:
         .create(`mek1000:compressed_iridium_crystal`)
         .displayName(`compressed iridium crystal`)
         .tooltip('夢の塊 (1個でも相当な値段)')
@@ -88,7 +88,7 @@ onEvent('item.registry', event => {
         .rarity("uncommon")
         .glow(true)
 
-    event // 圧縮凝塊
+    event // 圧縮凝塊:
         .create(`mek1000:iridium_clump_20`)
         .displayName(`20x iridium clump`)
         .tooltip('でもさ')
@@ -98,7 +98,7 @@ onEvent('item.registry', event => {
         .glow(true)
         .barWidth(itemstack => 13)
         .barColor(itemstack => Color.AQUA)
-    event // 圧縮欠片
+    event // 圧縮欠片:
         .create(`mek1000:iridium_shard_20`)
         .displayName(`20x iridium shard`)
         .tooltip('Nice to meet you!')
@@ -108,7 +108,7 @@ onEvent('item.registry', event => {
         .glow(true)
         .barWidth(itemstack => 13)
         .barColor(itemstack => Color.AQUA)
-    event // 圧縮結晶
+    event // 圧縮結晶:
         .create(`mek1000:iridium_crystal_20`)
         .displayName(`20x iridium crystal`)
         .tooltip('Hello.')
@@ -121,7 +121,7 @@ onEvent('item.registry', event => {
 })
 // {"name": ,"color":}
 onEvent('mekanism.slurry.registry', event => {
-    //通常圧縮懸濁液 (よごれてる)
+    //通常圧縮懸濁液 (よごれてる):
     event.create('mek1000:dirty_compressed_iron').texture("kubejs:slurry/dirty").color(0xf0f8ff)
     event.create('mek1000:dirty_compressed_copper').texture("kubejs:slurry/dirty").color(0xf0f8ff)
     event.create('mek1000:dirty_compressed_gold').texture("kubejs:slurry/dirty").color(0xF2CD67)
@@ -130,7 +130,7 @@ onEvent('mekanism.slurry.registry', event => {
     event.create('mek1000:dirty_compressed_lead').texture("kubejs:slurry/dirty").color(0xf0f8ff)
     event.create('mek1000:dirty_compressed_uranium').texture("kubejs:slurry/dirty").color(0xf0f8ff)
 
-    //追加パック 圧縮懸濁液（きれい）
+    //追加パック 圧縮懸濁液（きれい）:
     event.create('mek1000:clean_compressed_iron').texture("kubejs:slurry/clean").color(0xf0f8ff)
     event.create('mek1000:clean_compressed_copper').texture("kubejs:slurry/clean").color(0xf0f8ff)
     event.create('mek1000:clean_compressed_gold').texture("kubejs:slurry/clean").color(0xF2CD67)
@@ -139,7 +139,7 @@ onEvent('mekanism.slurry.registry', event => {
     event.create('mek1000:clean_compressed_lead').texture("kubejs:slurry/clean").color(0xf0f8ff)
     event.create('mek1000:clean_compressed_uranium').texture("kubejs:slurry/clean").color(0xf0f8ff)
 
-    //追加パック2 圧縮イリジウムパック（両方）
+    //追加パック2 圧縮イリジウムパック（両方）:
     event.create('mek1000:dirty_compressed_iridium').texture("kubejs:slurry/dirty").color(0xf0f8ff)
     event.create('mek1000:clean_compressed_iridium').texture("kubejs:slurry/clean").color(0xf0f8ff)
 
