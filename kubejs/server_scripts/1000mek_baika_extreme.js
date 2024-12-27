@@ -15,7 +15,7 @@ onEvent('recipes', event => {
             event.recipes.mekanism.purifying(`${Math.floor(multiplier*4)}x mek1000:softore_redstone`,input_item,'1x mekanism:oxygen') //3
             event.recipes.mekanism.injecting(`${Math.floor(multiplier*8)}x mek1000:extructed_redstone`,input_item,'1x mekanism:hydrogen_chloride') //4
             event.custom({ //5-0
-                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":input_item}},gasInput:{"amount":Math.max(1,Math.floor(multiplier*0.5)),"gas":"mekanism:sulfuric_acid"},output:{"slurry": "mek1000:dirty_redstone","amount":Math.floor(multiplier*125)*20,"chemicalType":"slurry"}
+                type:"mekanism:dissolution",itemInput:{"ingredient":{"item":input_item}},gasInput:{"amount":Math.max(1,Math.floor(multiplier*0.5)),"gas":"mekanism:sulfuric_acid"},output:{"slurry": "mek1000:dirty_certus_quartz","amount":Math.floor(multiplier*125)*20,"chemicalType":"slurry"}
             })
         } else if (ore_type=="diamond"||ore_type=="emerald"||ore_type=="coal"){
             event.recipes.mekanism.enriching(`${Math.floor(multiplier*2)}x minecraft:${ore_type}`,input_item,'1x mekanism:oxygen')
