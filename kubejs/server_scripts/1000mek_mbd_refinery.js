@@ -1,6 +1,21 @@
 onEvent('recipes', event => {
     // additional item & fluids
-
+    event.recipes.mekanism.combining(`mek1000:polonium_synced`, '40x mekanism:pellet_polonium', 'mek1000:fluorite_singularity').id(`mek1000:docking_anti`)
+    event.custom({"type":"mekanism:reaction",
+        "itemInput":{"item":`mekanism:pellet_polonium`},
+        "fluidInput":{"amount":1000,"tag":"minecraft:water"},
+        "gasInput":{"amount":10,"gas":"mek1000:active_aqua_regia"},
+        "energyRequired":100000,"duration":10,
+        "gasOutput":{"amount":1,"gas":"mekanism:antimatter"}
+    })
+    event.custom({"type":"mekanism:reaction",
+        "itemInput":{"item":`mek1000:polonium_synced`},
+        "fluidInput":{"amount":1000,"tag":"minecraft:water"},
+        "gasInput":{"amount":50,"gas":"mek1000:vaporized_uranium"},
+        "energyRequired":10000000,"duration":100,
+        "itemOutput":{"item":'mek1000:fluorite_singularity'},
+        "gasOutput":{"amount":45,"gas":"mekanism:antimatter"}
+    })
 
     // auto builder
     event.shaped(`multiblocked:multiblock_builder`,[

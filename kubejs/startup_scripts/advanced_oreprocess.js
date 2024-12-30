@@ -41,6 +41,10 @@ onEvent(`item.registry`, event => {
         }
     })
 
+    
+    // Synced Polonium
+    event.create(`mek1000:polonium_synced`).texture(`mekanism:item/pellet_polonium`).glow(true).tooltip(`WTF too long name`)
+
 })
 
 onEvent(`mekanism.gas.registry`, event => {
