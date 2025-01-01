@@ -16,5 +16,16 @@
   "block.superores.super_deepslate_redstone_ore": "Super Deepslate Redstone Ore",
   "block.superores.super_emerald_ore": "Super Emerald Ore",
   "block.superores.super_deepslate_iron_ore": "Super Deepslate Iron Ore",
-  "block.superores.super_redstone_ore": "Super Redstone Ore"
+  "block.superores.super_redstone_ore": "Super Redstone Ore",
+  "block.superores.super_fluorite_ore":"Super Fluorite Ore",
+  "block.superores.super_deepslate_fluorite_ore":"Super Deepslate Fluorite Ore",
+  "block.superores.super_iridium_ore":"Super Iridium Ore",
+  "block.superores.super_lead_ore":"Super Lead Ore",
+  "block.superores.super_deepslate_lead_ore":"Super Deepslate Lead Ore",
+  "block.superores.super_osmium_ore":"Super Osmium Ore",
+  "block.superores.super_deepslate_osmium_ore":"Super Deepslate Osmium Ore",
+  "block.superores.super_tin_ore":"Super Tin Ore",
+  "block.superores.super_deepslate_tin_ore":"Super Deepslate Tin Ore",
+  "block.superores.super_uranium_ore":"Super Uranium Ore",
+  "block.superores.super_deepslate_uranium_ore":"Super Deepslate Uranium Ore"
 }
