@@ -44,6 +44,6 @@ onEvent('recipes', event => {
   ],{
     s:'mek1000:redstone_singularity',
     d:'mekanism:qio_drive_base',
-    e:'mekaevolution:supreme_control_circuit'
+    e:'mek1000:superheated_alloy'
   })
 })

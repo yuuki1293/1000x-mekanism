@@ -20,12 +20,14 @@ onEvent('recipes', event => {
     // auto builder
     event.shaped(`multiblocked:multiblock_builder`,[
         'tet',
-        ' w ',
+        'rwr',
         'tet'
     ],{
         t:`mekanism:block_tin`,
         e:`mekanism:elite_control_circuit`,
-        w:`mekanismadditions:walkie_talkie`
+        w:`mekanismadditions:walkie_talkie`,
+        r:`minecraft:redstone`
+
     }).id(`mek1000:mbd_builder`)
 
     // tin casing craft
