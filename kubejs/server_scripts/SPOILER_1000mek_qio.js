@@ -38,11 +38,12 @@ onEvent('recipes', event => {
 
   // short cut!
   event.shaped('4x mekaevolution:qio_drive_supreme',[
-    'ddd',
+    'ede',
     'dsd',
-    'ddd'
+    'ede'
   ],{
     s:'mek1000:redstone_singularity',
-    d:'mekanism:qio_drive_base'
+    d:'mekanism:qio_drive_base',
+    e:'mekaevolution:supreme_control_circuit'
   })
 })
