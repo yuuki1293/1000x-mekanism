@@ -122,7 +122,7 @@ onEvent('recipes', event => {
     crystal_disassemble_20("iridium","kubejs:crystal_iridium","mek1000:compressed_iridium_crystal")
 
     // hidden recipe
-    event.recipes.mekanism.combining(`2x mek1000:stray_cat`, `mek1000:tiny_antimatter`, 'minecraft:amethyst_shard').id("mek1000:packcat")
+    event.recipes.mekanism.combining(`25x mek1000:stray_cat`, `mek1000:tiny_antimatter`, 'minecraft:amethyst_shard').id("mek1000:packcat")
     event.custom({
         "type": "mekanism:oxidizing",
         "input": {
@@ -132,7 +132,7 @@ onEvent('recipes', event => {
         },
         "output": {
           "gas": 'mek1000:vaporized_amethyst',
-          "amount": 10000
+          "amount": 9600
         },
     }).id("mek1000:oxcat")
 
