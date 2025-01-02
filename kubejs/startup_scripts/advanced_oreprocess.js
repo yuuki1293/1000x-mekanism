@@ -53,6 +53,10 @@ onEvent(`mekanism.gas.registry`, event => {
     event.create(`mek1000:activated_redstone`).displayName("Activator Redstone").color(0xf05050)
     event.create(`mek1000:active_aqua_regia`).displayName("Activated Aqua Regia").color(0xffff80).radioactivity(0.015)
 
+    // 硝酸用各種ガス
+    event.create(`mek1000:no2`).displayName("Nitrogen Dioxide").color(0xe000b4)
+    event.create(`mek1000:nitric_acid`).displayName("Nitric Acid").color(0xe030e4)
+
     //各種活性蒸気
     event.create(`mek1000:active_iron`).displayName("Active Compressed Iron Gas").color(0xffff80)
     event.create(`mek1000:active_copper`).displayName("Active Compressed Copper Gas").color(0xffff80)

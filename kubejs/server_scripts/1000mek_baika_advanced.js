@@ -38,10 +38,33 @@ onEvent('recipes', event => {
         "itemInput":{"item":"mekanism:shard_iron"},
         "fluidInput":{"amount":75,"fluid":"mekanism:hydrogen_chloride"},
         "gasInput":{"amount":25,"gas":"mekanism:sulfuric_acid"},
-        "energyRequired":1,"duration":1,
+        "energyRequired":10000,"duration":10,
         "itemOutput":{"item":"mekanism:shard_iron"},
+        "gasOutput":{"gas":"mek1000:aqua_regia","amount":5}
+    })
+    event.custom({"type":"mekanism:reaction",
+        "itemInput":{"item":"mekanism:shard_gold"},
+        "fluidInput":{"amount":75,"fluid":"mekanism:hydrogen_chloride"},
+        "gasInput":{"amount":25,"gas":"mek1000:nitric_acid"},
+        "energyRequired":1,"duration":1,
+        "itemOutput":{"item":"mekanism:shard_gold"},
         "gasOutput":{"gas":"mek1000:aqua_regia","amount":100}
     })
+
+    // Add: 硝酸 
+    // mekanism:nutritional_paste
+    event.custom({"type":"mekanism:reaction",
+        "itemInput":{"item":"mekanism:shard_copper"},
+        "fluidInput":{"amount":1000,"fluid":"mekanism:nutritional_paste"},
+        "gasInput":{"amount":10,"gas":"mekanism:water_vapor"},
+        "energyRequired":1000,"duration":100,
+        "itemOutput":{"item":"mekanism:shard_copper"},
+        "gasOutput":{"gas":"mek1000:no2","amount":300}
+    })
+    event.custom({
+        type:"mekanism:chemical_infusing","chemicalType":"gas",leftInput:{"gas":"mek1000:no2","amount":1},rightInput:{"gas":"mekanism:water_vapor","amount":1},output:{"gas":"mek1000:nitric_acid","amount":1}
+    })
+
 
     let advanced_processing_mk2 = (type,outputs_5,mode,super_ore,super_dore,super_nore) => {
         //スタートアップ(鉱石->各種中間生成物へ):
