@@ -376,7 +376,7 @@
                 "item": "minecraft:emerald_ore"
               }
             },
-            "chance": 1.0
+            "chance": 0.0
           },
           {
             "content": {
