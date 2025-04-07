@@ -1,0 +1,237 @@
+{
+	id: "3BC819F14603543A"
+	group: "67528FB7540FDF9C"
+	order_index: 3
+	filename: "4"
+	title: "チャプター4"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			dependencies: ["2165BF79CD195E42"]
+			id: "310A783551E65BBE"
+			tasks: [{
+				id: "641D8B89D68913AE"
+				type: "item"
+				item: "mek1000:infinity_ingot"
+			}]
+		}
+		{
+			x: 0.0d
+			y: -1.5d
+			dependencies: ["186E77576F49D8D5"]
+			id: "2165BF79CD195E42"
+			tasks: [{
+				id: "6F42A407CB7CE914"
+				type: "item"
+				item: "mek1000:neutronium_ingot"
+			}]
+			rewards: [
+				{
+					id: "13C1EDB7118EA108"
+					type: "item"
+					item: "mek1000:neutronium_ingot"
+					count: 15
+				}
+				{
+					id: "7D929386C10BD150"
+					type: "item"
+					item: "mek1000:eternal_singularity"
+				}
+			]
+		}
+		{
+			x: 1.0d
+			y: 1.5d
+			dependencies: ["310A783551E65BBE"]
+			id: "313082D99FCF7B8B"
+			tasks: [{
+				id: "0EF2E7F4E31D59AD"
+				type: "item"
+				item: {
+					id: "mekanism:creative_energy_cube"
+					Count: 1b
+					tag: {
+						mekData: {
+							EnergyContainers: [{
+								Container: 0b
+								stored: "18446744073709551615.9999"
+							}]
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: -1.0d
+			y: 1.5d
+			dependencies: ["310A783551E65BBE"]
+			id: "0001374B6E6C8B35"
+			tasks: [{
+				id: "6F14BB170960C571"
+				type: "item"
+				item: {
+					id: "ironjetpacks:jetpack"
+					Count: 1b
+					tag: {
+						Id: "ironjetpacks:creative"
+						Throttle: 1.0d
+					}
+				}
+			}]
+		}
+		{
+			x: 0.0d
+			y: 1.5d
+			subtitle: "「ガスの無限化」がなにを意味するか…"
+			dependencies: ["310A783551E65BBE"]
+			id: "21E7CEABA915B13D"
+			tasks: [{
+				id: "4FB5D37AF6F9EE74"
+				type: "item"
+				item: "mekanism:creative_chemical_tank"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 1.5d
+			dependencies: ["310A783551E65BBE"]
+			id: "0D45B5F9C2CF8C90"
+			tasks: [{
+				id: "7A9AACD8140FD19D"
+				type: "item"
+				item: "ae2:creative_energy_cell"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 1.5d
+			dependencies: ["310A783551E65BBE"]
+			id: "22761897D3B0D982"
+			tasks: [{
+				id: "658CB58CFE7275A4"
+				type: "item"
+				item: "mekanism:creative_fluid_tank"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 3.0d
+			dependencies: [
+				"21E7CEABA915B13D"
+				"0D45B5F9C2CF8C90"
+				"313082D99FCF7B8B"
+				"22761897D3B0D982"
+				"0001374B6E6C8B35"
+			]
+			id: "2CEDAFFB16B43E25"
+			tasks: [{
+				id: "0D6157643CB33929"
+				type: "item"
+				item: "mek1000:creative_talisman"
+			}]
+			rewards: [
+				{
+					id: "5EFBF82ACD80ED68"
+					type: "item"
+					item: {
+						id: "ironjetpacks:jetpack"
+						Count: 1b
+						tag: {
+							Id: "ironjetpacks:creative"
+							Throttle: 1.0d
+						}
+					}
+				}
+				{
+					id: "42EE0D74C7A386C6"
+					type: "item"
+					item: "mekanism:creative_fluid_tank"
+				}
+				{
+					id: "42E4C21FD5BDB9C2"
+					type: "item"
+					item: {
+						id: "mekanism:creative_energy_cube"
+						Count: 1b
+						tag: {
+							mekData: {
+								EnergyContainers: [{
+									Container: 0b
+									stored: "18446744073709551615.9999"
+								}]
+							}
+						}
+					}
+				}
+				{
+					id: "7549C909143D444F"
+					type: "item"
+					item: "mekanism:creative_chemical_tank"
+				}
+				{
+					id: "141792BB2CC7456A"
+					type: "item"
+					item: "ae2:creative_energy_cell"
+				}
+			]
+		}
+		{
+			title: "チャンクデストロイヤーを作る"
+			x: 2.0d
+			y: 0.0d
+			subtitle: "大地に絶対的平等をもたらしましょう"
+			dependencies: ["310A783551E65BBE"]
+			id: "1222B2E4AE755E9E"
+			tasks: [{
+				id: "38FDE138D7CFC3D5"
+				type: "item"
+				item: "quarryplus:adv_quarry"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 4.5d
+			dependencies: ["2CEDAFFB16B43E25"]
+			id: "1C0FB95D1B285417"
+			tasks: [{
+				id: "4F59460C92709270"
+				type: "item"
+				item: "mekanism:creative_bin"
+			}]
+			rewards: [{
+				id: "1494542B5195806E"
+				type: "item"
+				item: "mekanism:creative_bin"
+			}]
+		}
+		{
+			title: "MEクリエイティブセルを作る"
+			x: 0.0d
+			y: 6.0d
+			subtitle: "\"桁違い\"免許皆伝です、おめでとうございます"
+			dependencies: ["1C0FB95D1B285417"]
+			id: "13D492256F997925"
+			tasks: [{
+				id: "488DCC3FE5507C8C"
+				type: "item"
+				item: "ae2:creative_item_cell"
+			}]
+			rewards: [
+				{
+					id: "09D3E7F1454C468E"
+					type: "item"
+					item: "ae2:creative_fluid_cell"
+				}
+				{
+					id: "7721B5DF8AEB3894"
+					type: "item"
+					item: "appmek:creative_chemical_cell"
+				}
+			]
+		}
+	]
+	quest_links: [ ]
+}

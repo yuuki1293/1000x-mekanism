@@ -1,0 +1,619 @@
+{
+	id: "1004F369519B1D55"
+	group: "67528FB7540FDF9C"
+	order_index: 0
+	filename: "1"
+	title: "チャプター1"
+	icon: "mekanismgenerators:wind_generator"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "『桁違いな電力』へようこそ"
+			x: 0.0d
+			y: 0.0d
+			subtitle: "ちょっと日本語で失礼します"
+			description: [
+				"このmodpackの特徴は以下の通りです。"
+				"・Mekanism製機械の消費電力が1000倍"
+				"・鉱石生成量が200倍以上"
+				"・最大192000倍にもなる鉱石倍化方法"
+				"・総計数千億の資源を消費するエンドコンテンツ"
+				"なるべく耐えてくださいね。"
+				""
+				"また、このmodpackは現在、日本語にのみ対応しています"
+				"のちのち英語はカバーしたいなと思ってます。思ってるだけです。"
+			]
+			id: "04A5434D67C68ED9"
+			tasks: [{
+				id: "7A230FF5BD949349"
+				type: "checkmark"
+				title: "まずは採掘です"
+			}]
+			rewards: [{
+				id: "1095A1588C460BE7"
+				type: "item"
+				item: {
+					id: "mekanismtools:refined_obsidian_paxel"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			x: 0.0d
+			y: 1.5d
+			subtitle: "初手からおかしな桁だと思うじゃん？"
+			description: [
+				"この世界の鉱石生成量は、「ダイヤ単体で」216倍になっています"
+				"通常の埋蔵量は1チャンクでだいたい16個ぐらいなんですが、この世界だと3400個ぐらい取れます。"
+				"すごい埋蔵量、希少性ゼロです。"
+				""
+				"また生成高度も改変されていて、ちょっと運が良ければ地表に露出してるところを見つけられるでしょう。"
+				"なので、ダイヤ1024個は楽勝です。きっとすぐに集まることでしょう"
+				""
+				"採掘時にはFTB_Ultimineのキーコンフィグ設定をお忘れなく。"
+			]
+			dependencies: ["04A5434D67C68ED9"]
+			id: "601AD4CAF4A1A0CC"
+			tasks: [{
+				id: "4407B1B763FF9FC8"
+				type: "item"
+				title: "ダイヤを1024個集める"
+				item: "minecraft:diamond"
+				count: 1024L
+			}]
+		}
+		{
+			title: "鉄の原石を1024個集める"
+			x: -1.5d
+			y: 1.5d
+			subtitle: "この世界のスティーブ君は空腹を知りません"
+			description: [
+				"このmodpackは空腹度の概念が消え去ってます。"
+				"空腹度を消費するFTB_Ultimineが使い放題です、やったぜ。"
+				""
+				"また、ご飯を食べるとHPが直接回復します。"
+			]
+			dependencies: ["04A5434D67C68ED9"]
+			id: "2E723DD44A29E6D0"
+			tasks: [{
+				id: "49738C27C179F092"
+				type: "item"
+				item: "minecraft:raw_iron"
+				count: 1024L
+			}]
+			rewards: [
+				{
+					id: "524B447C9B92FDFE"
+					type: "item"
+					item: "minecraft:blast_furnace"
+					count: 32
+				}
+				{
+					id: "0D8E10DFE063C975"
+					type: "item"
+					item: "minecraft:coal_block"
+					count: 128
+				}
+			]
+		}
+		{
+			title: "Dank 6を作る"
+			x: 1.5d
+			y: 1.5d
+			subtitle: "採掘のお供に、大容量ストレージをどうぞ"
+			dependencies: ["04A5434D67C68ED9"]
+			id: "70038B60CA8ED4C5"
+			tasks: [{
+				id: "184B18C728840B0E"
+				type: "item"
+				item: "dankstorage:dank_6"
+			}]
+			rewards: [{
+				id: "1E8AC44E918C3EC3"
+				type: "item"
+				item: "dankstorage:dock"
+			}]
+		}
+		{
+			title: "風力発電機を作る"
+			x: 0.0d
+			y: 3.0d
+			subtitle: "最低でもこれだけ必要です"
+			dependencies: [
+				"601AD4CAF4A1A0CC"
+				"2E723DD44A29E6D0"
+				"70038B60CA8ED4C5"
+			]
+			id: "710F3EDB006061A6"
+			tasks: [{
+				id: "701811B5308E0BFF"
+				type: "item"
+				item: "mekanismgenerators:wind_generator"
+				count: 256L
+			}]
+			rewards: [{
+				id: "438653694193156C"
+				type: "item"
+				item: "mekaevolution:absolute_universal_cable"
+				count: 256
+			}]
+		}
+		{
+			title: "冶金注入器を作る"
+			x: 0.0d
+			y: 4.5d
+			subtitle: "消費鉱石量が9倍になってるので注意"
+			dependencies: ["710F3EDB006061A6"]
+			id: "20F4EF7D8C4D630E"
+			tasks: [{
+				id: "5B822F7547C1216A"
+				type: "item"
+				item: "mekanism:metallurgic_infuser"
+			}]
+			rewards: [
+				{
+					id: "0127C8A18380CABD"
+					type: "item"
+					item: "mekanism:enriched_redstone"
+					count: 16
+				}
+				{
+					id: "4E7B869A72C6FC22"
+					type: "item"
+					item: "mekanism:enriched_carbon"
+					count: 16
+				}
+			]
+		}
+		{
+			title: "ケーシングと回路を作る"
+			x: 0.0d
+			y: 6.0d
+			subtitle: "回路作るためにAE2を進めないといけません‼"
+			dependencies: [
+				"20F4EF7D8C4D630E"
+				"554D11AB0AD56FE9"
+			]
+			id: "24404FB747E39C54"
+			tasks: [
+				{
+					id: "3771B1E7644D7778"
+					type: "item"
+					item: "mekanism:steel_casing"
+				}
+				{
+					id: "000123CC4575D52C"
+					type: "item"
+					item: "mekanism:basic_control_circuit"
+				}
+			]
+			rewards: [
+				{
+					id: "536E9F72AF51D3E8"
+					type: "item"
+					item: "mekanism:steel_casing"
+					count: 15
+				}
+				{
+					id: "585903673046E939"
+					type: "item"
+					item: "mekanism:basic_control_circuit"
+					count: 15
+				}
+			]
+		}
+		{
+			title: "AE2の回路3種を集める"
+			x: 3.0d
+			y: 6.0d
+			subtitle: "後々必要になるから、今のうちにね"
+			dependencies: ["59A1B70BE356FF92"]
+			id: "554D11AB0AD56FE9"
+			tasks: [
+				{
+					id: "6F76F7A881281D09"
+					type: "item"
+					item: "ae2:logic_processor"
+				}
+				{
+					id: "0DB725EB2FA1061D"
+					type: "item"
+					item: "ae2:calculation_processor"
+				}
+				{
+					id: "0AF2BB5AFBCED6B7"
+					type: "item"
+					item: "ae2:engineering_processor"
+				}
+			]
+			rewards: [
+				{
+					id: "2059805BF62E1F9F"
+					type: "item"
+					item: "ae2:logic_processor"
+					count: 63
+				}
+				{
+					id: "171EF5FE166567A2"
+					type: "item"
+					item: "ae2:calculation_processor"
+					count: 63
+				}
+				{
+					id: "0121527BDF1B202A"
+					type: "item"
+					item: "ae2:engineering_processor"
+					count: 63
+				}
+			]
+		}
+		{
+			title: "金型4種を集める"
+			x: 3.0d
+			y: 4.5d
+			subtitle: "たまにだけど、全然生成されないことあるよね"
+			dependencies: ["632F7957EFAF3710"]
+			id: "59A1B70BE356FF92"
+			tasks: [
+				{
+					id: "6D9E8A95371E8A92"
+					type: "item"
+					item: "ae2:silicon_press"
+				}
+				{
+					id: "74FC8615DA212198"
+					type: "item"
+					item: "ae2:calculation_processor_press"
+				}
+				{
+					id: "1250A7B6819B95CF"
+					type: "item"
+					item: "ae2:engineering_processor_press"
+				}
+				{
+					id: "2ECCA88D00902945"
+					type: "item"
+					item: "ae2:logic_processor_press"
+				}
+			]
+			rewards: [
+				{
+					id: "7E1F19CC666987EF"
+					type: "item"
+					item: "ae2things:advanced_inscriber"
+					count: 5
+				}
+				{
+					id: "1D2BF5BF3A63F7A7"
+					type: "item"
+					item: "ae2:inscriber"
+					count: 3
+				}
+			]
+		}
+		{
+			title: "隕石コンパスを作る"
+			x: 3.0d
+			y: 3.0d
+			subtitle: "探索の際は落下ダメージにお気をつけて"
+			dependencies: ["19FAC106938EBB93"]
+			id: "632F7957EFAF3710"
+			tasks: [{
+				id: "055C486B15B7B89F"
+				type: "item"
+				item: "ae2:sky_compass"
+			}]
+			rewards: [{
+				id: "073102E6C895B900"
+				type: "item"
+				item: {
+					id: "ironjetpacks:jetpack"
+					Count: 1b
+					tag: {
+						Id: "ironjetpacks:gold"
+						Throttle: 1.0d
+					}
+				}
+			}]
+		}
+		{
+			title: "究極エネルギーキューブを作る"
+			x: 1.5d
+			y: 3.0d
+			subtitle: "すっごいお安くなってますよ"
+			dependencies: ["710F3EDB006061A6"]
+			id: "19FAC106938EBB93"
+			tasks: [{
+				id: "439C840B80B24025"
+				type: "item"
+				item: "mekanism:ultimate_energy_cube"
+			}]
+			rewards: [{
+				id: "03204EB87DBE0AF4"
+				type: "item"
+				item: "mekaevolution:plasma_pickaxe"
+			}]
+		}
+		{
+			title: "出番のない発電機を作る"
+			x: -3.0d
+			y: 3.0d
+			subtitle: "発電量が貧弱すぎたからね、仕方ないね"
+			dependencies: ["710F3EDB006061A6"]
+			id: "7DD47DF8FDEBB897"
+			tasks: [
+				{
+					id: "459F69502EB50F31"
+					type: "item"
+					item: "mekanismgenerators:heat_generator"
+				}
+				{
+					id: "518FD3D6ABDAC505"
+					type: "item"
+					item: "mekanismgenerators:advanced_solar_generator"
+				}
+				{
+					id: "2695C6A3B826B9A2"
+					type: "item"
+					item: "mekanismgenerators:bio_generator"
+				}
+			]
+			rewards: [{
+				id: "4BEAB87FF18E5858"
+				type: "item"
+				item: "compactmekanismmachines:compact_industrial_turbine"
+			}]
+		}
+		{
+			title: "濃縮器を作る"
+			x: 0.0d
+			y: 7.5d
+			subtitle: "6倍化、解禁です"
+			dependencies: ["24404FB747E39C54"]
+			id: "4E5ECE152F5BE45B"
+			tasks: [{
+				id: "1732BD54C42481F7"
+				type: "item"
+				item: "mekanism:enrichment_chamber"
+			}]
+			rewards: [{
+				id: "5A10DC680820B850"
+				type: "item"
+				item: "mekanism:basic_control_circuit"
+				count: 8
+			}]
+		}
+		{
+			title: "粉砕機を作る"
+			x: -1.5d
+			y: 7.5d
+			dependencies: ["24404FB747E39C54"]
+			id: "0DD8B3F72994D008"
+			tasks: [{
+				id: "48A0087EDFD309DE"
+				type: "item"
+				item: "mekanism:crusher"
+			}]
+			rewards: [{
+				id: "184779DB653435F5"
+				type: "item"
+				item: "mekanism:steel_casing"
+			}]
+		}
+		{
+			title: "電気製錬機を作る"
+			x: 1.5d
+			y: 7.5d
+			subtitle: "けしてIron furnaceと比べてはいけない"
+			dependencies: ["24404FB747E39C54"]
+			id: "6DA71252535B24D7"
+			tasks: [{
+				id: "2F3B3BE45AC770E5"
+				type: "item"
+				item: "mekanism:energized_smelter"
+			}]
+			rewards: [{
+				id: "437E2DA9F67C152C"
+				type: "item"
+				item: "mekanism:steel_casing"
+			}]
+		}
+		{
+			title: "発展回路を作る"
+			x: 0.0d
+			y: 9.0d
+			subtitle: "ここぐらいで一旦赤石の消費量にキレよう"
+			dependencies: [
+				"4E5ECE152F5BE45B"
+				"0DD8B3F72994D008"
+				"6DA71252535B24D7"
+			]
+			id: "7C0C7D56AD69CE80"
+			tasks: [{
+				id: "227DD91CCEE8BB00"
+				type: "item"
+				item: "mekanism:advanced_control_circuit"
+			}]
+			rewards: [{
+				id: "4A62610E7E1F9899"
+				type: "item"
+				item: "mekanism:advanced_control_circuit"
+				count: 3
+			}]
+		}
+		{
+			title: "浄化室と精鋭回路を作る"
+			x: 1.5d
+			y: 10.5d
+			subtitle: "合金の易化レシピと鉱石24倍化が解禁です"
+			dependencies: ["7C0C7D56AD69CE80"]
+			id: "6E969D1E1C88F553"
+			tasks: [
+				{
+					id: "7F5F2EF564C2F93B"
+					type: "item"
+					item: "mekanism:purification_chamber"
+				}
+				{
+					id: "6496DC711756C0E7"
+					type: "item"
+					item: "mekanism:elite_control_circuit"
+				}
+			]
+			rewards: [{
+				id: "5BA8B56A25B0935D"
+				type: "item"
+				item: "mekanism:elite_control_circuit"
+				count: 3
+			}]
+		}
+		{
+			title: "加圧反応室を作る"
+			x: -1.5d
+			y: 10.5d
+			subtitle: "エチレンと醤油を生産するのに使います"
+			dependencies: ["7C0C7D56AD69CE80"]
+			id: "328FC63039D07A3D"
+			tasks: [{
+				id: "2E940FB7A2F694D5"
+				type: "item"
+				item: "mekanism:pressurized_reaction_chamber"
+			}]
+		}
+		{
+			title: "化学注入器と究極回路を作る"
+			x: 1.5d
+			y: 12.0d
+			dependencies: [
+				"6E969D1E1C88F553"
+				"065D7610598B3727"
+			]
+			id: "7A9AAE7E19817308"
+			tasks: [
+				{
+					id: "1680FA9799641394"
+					type: "item"
+					item: "mekanism:chemical_injection_chamber"
+				}
+				{
+					id: "17F8DB39E3B5CDE8"
+					type: "item"
+					item: "mekanism:ultimate_control_circuit"
+				}
+			]
+			rewards: [{
+				id: "598C7496518234E4"
+				type: "item"
+				item: "mekanism:ultimate_control_circuit"
+			}]
+		}
+		{
+			title: "核燃料を作る"
+			x: 1.5d
+			y: 13.5d
+			dependencies: ["7A9AAE7E19817308"]
+			id: "1B5A6B8FCD0E6DAE"
+			tasks: [
+				{
+					id: "6155C64FBCDEE9FB"
+					type: "item"
+					item: "mekanism:chemical_dissolution_chamber"
+				}
+				{
+					id: "101D8EDE8D882B23"
+					type: "item"
+					item: "mekanism:isotopic_centrifuge"
+				}
+			]
+			rewards: [{
+				id: "00E717B7E709882A"
+				type: "item"
+				item: "mekanism:ultimate_control_circuit"
+				count: 4
+			}]
+		}
+		{
+			title: "バリンガスを作成する"
+			x: 0.0d
+			y: 15.0d
+			subtitle: "modpack製作監督を燃やしてFEを得ましょう"
+			dependencies: [
+				"328FC63039D07A3D"
+				"1B5A6B8FCD0E6DAE"
+			]
+			id: "0454691C4C0E26B4"
+			tasks: [{
+				id: "3FF3EE88A283068F"
+				type: "item"
+				item: "mekanismgenerators:gas_burning_generator"
+			}]
+		}
+		{
+			title: "パラレルプロセッサーを作る"
+			x: 3.0d
+			y: 12.0d
+			dependencies: ["554D11AB0AD56FE9"]
+			id: "065D7610598B3727"
+			tasks: [{
+				id: "3D81904E8CE49D1C"
+				type: "item"
+				item: "lazierae2:parallel_processor"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 12.0d
+			subtitle: "ワンちゃん時間を加速してるビニルハウス"
+			dependencies: [
+				"7A9AAE7E19817308"
+				"328FC63039D07A3D"
+			]
+			id: "6B8A32D851401DCE"
+			tasks: [{
+				id: "6662EEDAC3258E5A"
+				type: "item"
+				item: "mek1000:greenhouse"
+			}]
+		}
+		{
+			x: -3.0d
+			y: 10.5d
+			subtitle: "丸石を億単位で生産しよう"
+			dependencies: ["328FC63039D07A3D"]
+			id: "00682C85E56FDB94"
+			tasks: [{
+				id: "4069D8FB53100456"
+				type: "item"
+				item: "mek1000:cobble_generator"
+			}]
+			rewards: [{
+				id: "51CF9684F862AE17"
+				type: "item"
+				item: "mek1000:5xcobblestone"
+				count: 64
+			}]
+		}
+		{
+			x: -3.0d
+			y: 12.0d
+			dependencies: ["00682C85E56FDB94"]
+			id: "38906A60A646405A"
+			tasks: [{
+				id: "4B9AEA675CF35854"
+				type: "item"
+				item: "mek1000:bedrockium_ingot"
+			}]
+			rewards: [{
+				id: "7D449DF546817046"
+				type: "item"
+				item: "mek1000:bedrockium_ingot"
+				count: 63
+			}]
+		}
+	]
+	quest_links: [ ]
+}

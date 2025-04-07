@@ -1,0 +1,195 @@
+{
+	id: "03C182E8527D9AE9"
+	group: "67528FB7540FDF9C"
+	order_index: 1
+	filename: "2"
+	title: "チャプター2"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "1マス原子炉を作る"
+			x: 0.0d
+			y: 0.0d
+			subtitle: "SFというか謎技術の域です"
+			dependencies: ["1004F369519B1D55"]
+			id: "17F5DAB3AC130774"
+			tasks: [{
+				id: "76DCCFDC4A73B384"
+				type: "item"
+				item: "compactmekanismmachines:compact_fission_reactor"
+			}]
+		}
+		{
+			title: "反物質ペレットを作る"
+			x: 0.0d
+			y: 1.5d
+			subtitle: "本来のMekanismはここまでです"
+			dependencies: ["17F5DAB3AC130774"]
+			id: "1A7E4A72F5505033"
+			tasks: [{
+				id: "3387744BA851931B"
+				type: "item"
+				item: "mekanism:pellet_antimatter"
+			}]
+			rewards: [{
+				id: "6A185CD0D2A4C3E5"
+				type: "item"
+				item: "mekanism:pellet_antimatter"
+				count: 63
+			}]
+		}
+		{
+			title: "ｺﾝﾊﾞｽﾁｮﾝｶﾞｽｼﾞｪﾈﾚｰﾀｰを作る"
+			x: -3.0d
+			y: 0.0d
+			subtitle: "俗称:GT発電機"
+			dependencies: ["1004F369519B1D55"]
+			id: "0E6937C71FB698A1"
+			tasks: [
+				{
+					id: "0DEFB3623CB5BAEF"
+					type: "item"
+					item: "mek1000:combustion_gas_generator"
+				}
+				{
+					id: "4443FB9152543A53"
+					type: "item"
+					item: "mek1000:reinforced_steel_casing"
+					count: 16L
+				}
+			]
+		}
+		{
+			title: "核融合炉を作る"
+			x: -3.0d
+			y: 1.5d
+			subtitle: "なお、この世界では出力が1000倍になってます"
+			dependencies: [
+				"1A7E4A72F5505033"
+				"0E6937C71FB698A1"
+			]
+			id: "56787094B4B394B3"
+			tasks: [{
+				id: "474A9CC7B6E32210"
+				type: "item"
+				item: "mekanismgenerators:fusion_reactor_controller"
+			}]
+		}
+		{
+			title: "ｲﾝﾌｨﾆﾃｨ回路を作る"
+			x: 0.0d
+			y: 3.0d
+			subtitle: "ここからはシンプルな桁の暴力です"
+			dependencies: ["1A7E4A72F5505033"]
+			id: "0475CCEA3CB64D1F"
+			tasks: [{
+				id: "47A735E68D959BBA"
+				type: "item"
+				item: "mekaevolution:infinite_control_circuit"
+			}]
+			rewards: [{
+				id: "755CDBED24BB4B33"
+				type: "item"
+				item: "mekaevolution:infinite_control_circuit"
+				count: 7
+			}]
+		}
+		{
+			title: "ステラ熱発電機を作る"
+			x: -3.0d
+			y: 3.0d
+			subtitle: "これにて「桁違いな電力」の電力部分が完結です"
+			dependencies: [
+				"56787094B4B394B3"
+				"0475CCEA3CB64D1F"
+			]
+			id: "4392A0FC204E0CE8"
+			tasks: [{
+				id: "7C2788CB010FBAA4"
+				type: "item"
+				item: "stellar:stellar_generator"
+			}]
+		}
+		{
+			title: "ｲﾝﾌｨﾆﾃｨﾌｭｰｼﾞｮﾝｺﾝﾄﾛｰﾗｰを作る"
+			x: 0.0d
+			y: 6.0d
+			subtitle: "絶対に手置きで作らないこと"
+			dependencies: ["78B4568CB8C02FEC"]
+			id: "7E1A2BDDDCA349C8"
+			tasks: [{
+				id: "617BF57A557CE960"
+				type: "item"
+				item: "mek1000:infinity_fusion_controller"
+			}]
+			rewards: [{
+				id: "3BCEFB9C3B9B1796"
+				type: "item"
+				item: "mekanism:sps_casing"
+				count: 1024
+			}]
+		}
+		{
+			title: "ﾗｰｼﾞﾃﾞｼﾞﾀﾙｱｾﾝﾌﾞﾘｰﾃｰﾌﾞﾙを作る"
+			x: 0.0d
+			y: 4.5d
+			subtitle: "そしてここからがGregです"
+			dependencies: ["0475CCEA3CB64D1F"]
+			id: "78B4568CB8C02FEC"
+			tasks: [{
+				id: "4C1143F7FF21E1B4"
+				type: "item"
+				item: "mek1000:large_digital_assembly_table"
+			}]
+			rewards: [{
+				id: "5105F956B7A2854E"
+				type: "item"
+				item: "mek1000:wtf_casing"
+				count: 64
+			}]
+		}
+		{
+			title: "Drill_Lを作る"
+			x: 4.5d
+			y: 4.5d
+			subtitle: "鉱石を過剰供給させよう!!!"
+			dependencies: ["4AEC610F44B61959"]
+			id: "2F7D0A2B6E2C03A5"
+			tasks: [{
+				id: "61635B3B3DFDB155"
+				type: "item"
+				item: "mek1000:sml_drill_l"
+			}]
+			rewards: [{
+				id: "780256B8B6B542AD"
+				type: "item"
+				item: "mek1000:electricity_resistant_reinforced_casing"
+				count: 512
+			}]
+		}
+		{
+			x: 3.0d
+			y: 4.5d
+			dependencies: ["2AA7553077B75139"]
+			id: "4AEC610F44B61959"
+			tasks: [{
+				id: "3ECBB0C8D5507362"
+				type: "item"
+				item: "mek1000:sml_drill_m"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 4.5d
+			dependencies: ["78B4568CB8C02FEC"]
+			id: "2AA7553077B75139"
+			tasks: [{
+				id: "323CA25B18F1F153"
+				type: "item"
+				item: "mek1000:sml_drill_s"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

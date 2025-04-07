@@ -1,0 +1,300 @@
+{
+	id: "255AE08BF5BD2F59"
+	group: "3F67765528C27E34"
+	order_index: 0
+	filename: "255AE08BF5BD2F59"
+	title: "便利用具類"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			subtitle: "この世界における機械のアプグレ手段です"
+			description: [
+				"この環境では、Mekanismの機械を直接アップグレードすることが出来ません"
+				"Tierインストーラー経由のアプグレとなります"
+			]
+			id: "05386AFC7DED8DFB"
+			tasks: [{
+				id: "40762C0300A0B4DA"
+				type: "item"
+				item: "mekanism:basic_tier_installer"
+			}]
+			rewards: [{
+				id: "7A96C5176ED7709A"
+				type: "item"
+				item: "mekanism:basic_tier_installer"
+				count: 15
+			}]
+		}
+		{
+			x: 1.5d
+			y: 0.0d
+			dependencies: ["05386AFC7DED8DFB"]
+			id: "5061414C7F70AE65"
+			tasks: [{
+				id: "742F01D09AB1B9EA"
+				type: "item"
+				item: "mekanism:advanced_tier_installer"
+			}]
+			rewards: [{
+				id: "5A144792305DD883"
+				type: "item"
+				item: "mekanism:advanced_tier_installer"
+				count: 15
+			}]
+		}
+		{
+			x: 3.0d
+			y: 0.0d
+			dependencies: ["5061414C7F70AE65"]
+			id: "6CE48185B66938FD"
+			tasks: [{
+				id: "3ECDCFE85155422A"
+				type: "item"
+				item: "mekanism:elite_tier_installer"
+			}]
+			rewards: [{
+				id: "5EE09EEB9DF0E5AE"
+				type: "item"
+				item: "mekanism:elite_tier_installer"
+				count: 15
+			}]
+		}
+		{
+			x: 4.5d
+			y: 0.0d
+			dependencies: ["6CE48185B66938FD"]
+			id: "7C59B9F5707F26E6"
+			tasks: [{
+				id: "71FF3C2B371CCE15"
+				type: "item"
+				item: "mekanism:ultimate_tier_installer"
+			}]
+			rewards: [{
+				id: "519D9530E4B7B139"
+				type: "item"
+				item: "mekanism:ultimate_tier_installer"
+				count: 15
+			}]
+		}
+		{
+			x: 0.0d
+			y: 1.5d
+			subtitle: "エンダーチェスト community edition unofficial modern"
+			description: [
+				"一言で言えば超便利なエンダーチェストです"
+				"中身が共有でき、外部からの搬出入を受け入れます"
+				"またチェストのGUIからチャンネルを操作でき、同じチャンネルのチェストと中身を共有できます"
+			]
+			id: "5C2123834E8BBAD7"
+			tasks: [{
+				id: "524EFFF9BA55D50E"
+				type: "item"
+				item: "dimstorage:dimensional_chest"
+			}]
+			rewards: [{
+				id: "0DEB7B170EEB3C56"
+				type: "item"
+				item: "dimstorage:dimensional_chest"
+				count: 15
+			}]
+		}
+		{
+			x: 1.5d
+			y: 1.5d
+			subtitle: "説明が難しいが凄く便利なBlock部門上位"
+			description: [
+				"ものすごく簡単にいえば、ブロックの外部やり取りをコピペできます"
+				"バインダーでコピーしたいブロックをシフト右クリックし、そのバインダーをentangled blockに右クリックすることで、ブロックをコピーできます"
+				"GUIなどの内部操作はコピー出来ません。"
+			]
+			id: "7A7C65D9358DF249"
+			tasks: [
+				{
+					id: "638D62BF2C58BC82"
+					type: "item"
+					item: {
+						id: "entangled:block"
+						Count: 1b
+						tag: { }
+					}
+				}
+				{
+					id: "59B1D8A09E0169B3"
+					type: "item"
+					item: "entangled:item"
+				}
+			]
+			rewards: [{
+				id: "64A61905D73C29C8"
+				type: "item"
+				item: {
+					id: "entangled:block"
+					Count: 1b
+					tag: { }
+				}
+				count: 15
+			}]
+		}
+		{
+			x: 3.0d
+			y: 1.5d
+			subtitle: "スパゲティ配線になりやすい配管第一位"
+			description: [
+				"あえてマニアックな言い方をすると「64item/t輸送を現実的な負荷で実現できる輸送系」です"
+				""
+				"ひとつの面から複数の搬出入を弄れるので、加圧反応室の自動化にはもってこいです。むしろこれ以外でやりたくない。"
+			]
+			id: "625EFC2C13142C08"
+			tasks: [{
+				id: "3542DED08FA82297"
+				type: "item"
+				item: "laserio:laser_node"
+			}]
+			rewards: [
+				{
+					id: "3FC01F1C5D269C8B"
+					type: "item"
+					item: "laserio:laser_node"
+					count: 31
+				}
+				{
+					id: "5FF563C450595E5D"
+					type: "item"
+					item: "laserio:overclocker_card"
+					count: 16
+				}
+				{
+					id: "6B79B8A0C9C6AA29"
+					type: "item"
+					item: "laserio:overclocker_node"
+					count: 16
+				}
+			]
+		}
+		{
+			x: 1.5d
+			y: 3.0d
+			subtitle: "BCタンク君!! BCタンク君じゃないか!!!!"
+			description: [
+				"1.7.10工業を少しでも触れた方なら「懐かしい!!!」ってなるやつです"
+				""
+				"これは名前の通り、それぞれ液体とガスを貯蔵できます"
+				"また上に積み上げることで、マルチブロックのタンクを形成します"
+			]
+			id: "06877FAA3CF0E4FF"
+			tasks: [
+				{
+					id: "1428E9F15F08F9F7"
+					type: "item"
+					item: "fluidtank:tank_wood"
+				}
+				{
+					id: "136D803B25FE498E"
+					type: "item"
+					item: "fluidtank:gas_tank_wood"
+				}
+			]
+			rewards: [
+				{
+					id: "0CDC9690D7D4C54A"
+					type: "item"
+					item: "fluidtank:tank_gold"
+				}
+				{
+					id: "05E9069EA9880000"
+					type: "item"
+					item: "fluidtank:gas_tank_gold"
+				}
+			]
+		}
+		{
+			x: 3.0d
+			y: 3.0d
+			subtitle: "\"チェストがタンクになる接続器\""
+			description: [
+				"一面だけテクスチャが異なる面がありますが、そこにチェスト等をくっつけてください"
+				"そしてそのチェストに、おもむろにタンクを入れてください"
+				"そしたら血迷った勢いで、接続器にパイプを繋げて液体を搬入してください"
+				""
+				"そうするとチェストの中に液体が貯蔵されます"
+				"ちゃんと接続器から液体を搬出できますよ"
+				"謎技術過ぎる"
+			]
+			id: "7A1020D9406EDD67"
+			tasks: [{
+				id: "287B918B2DAF9F66"
+				type: "item"
+				item: "fluidtank:chest_as_tank"
+			}]
+			rewards: [{
+				id: "1D986A5D86E52216"
+				type: "item"
+				item: "fluidtank:tank_emerald"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 3.0d
+			id: "21ED7E6734831707"
+			tasks: [{
+				id: "019199B9B48FE64A"
+				type: "item"
+				item: "cookingforblockheads:sink"
+			}]
+			rewards: [{
+				id: "213F578FFDBC77E6"
+				type: "item"
+				item: "cookingforblockheads:sink"
+				count: 15
+			}]
+		}
+		{
+			x: 4.5d
+			y: 1.5d
+			subtitle: "かさばるカードを保管しよう"
+			description: [
+				"LaserIOはカードを用いて搬出入を設定します"
+				"しかしこのカード、スタックできないのでめちゃかさばります"
+				""
+				"card_holderを用いれば、このかさばるカードを一括管理できます"
+			]
+			dependencies: ["625EFC2C13142C08"]
+			id: "4D7965ECCE78822C"
+			tasks: [{
+				id: "73A5E3D2285CFC34"
+				type: "item"
+				item: "laserio:card_holder"
+			}]
+			rewards: [
+				{
+					id: "1238E0B2D151C7CE"
+					type: "item"
+					item: "laserio:card_item"
+					count: 4
+				}
+				{
+					id: "3E757CAEA3519981"
+					type: "item"
+					item: "laserio:card_fluid"
+					count: 4
+				}
+				{
+					id: "43040CB0DD0D7F6A"
+					type: "item"
+					item: "laserio:card_energy"
+					count: 4
+				}
+				{
+					id: "0BFCB0470B290997"
+					type: "item"
+					item: "laserio:card_redstone"
+					count: 4
+				}
+			]
+		}
+	]
+	quest_links: [ ]
+}

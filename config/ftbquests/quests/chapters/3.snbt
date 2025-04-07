@@ -1,0 +1,449 @@
+{
+	id: "186E77576F49D8D5"
+	group: "67528FB7540FDF9C"
+	order_index: 2
+	filename: "3"
+	title: "チャプター3"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "infinity QIO Driveを作る"
+			x: 0.0d
+			y: 0.0d
+			subtitle: "作成お疲れさまでした。次はそれを百個ほど用います"
+			dependencies: [
+				"03C182E8527D9AE9"
+				"2EB8845B6061DEBB"
+				"4A967F974BC3A5C3"
+				"564508DBC602D911"
+			]
+			id: "1A7C97BB24091DDF"
+			tasks: [{
+				id: "0BC3A8BC9F172CC1"
+				type: "item"
+				item: "mekaevolution:qio_drive_infinite"
+			}]
+			rewards: [{
+				id: "14C3F51C08EE3C1B"
+				type: "item"
+				item: "mekaevolution:qio_drive_infinite"
+				count: 3
+			}]
+		}
+		{
+			x: 0.0d
+			y: -3.0d
+			subtitle: "これは自力で量産してください"
+			dependencies: ["0475CCEA3CB64D1F"]
+			id: "3C2B7DDEFCAED95E"
+			tasks: [{
+				id: "6FE5C57870C8FAD4"
+				type: "item"
+				item: "mekaevolution:infinite_energy_cube"
+			}]
+			rewards: [{
+				id: "3916482318BE6817"
+				type: "item"
+				item: "mekaevolution:infinite_control_circuit"
+				count: 256
+			}]
+		}
+		{
+			x: -1.5d
+			y: -1.5d
+			dependencies: ["1A7E4A72F5505033"]
+			id: "564508DBC602D911"
+			tasks: [{
+				id: "64188DA9D5373046"
+				type: "item"
+				item: "mekanism:qio_drive_supermassive"
+			}]
+			rewards: [{
+				id: "0D6F3BF17B05E401"
+				type: "item"
+				item: "mekaevolution:qio_drive_cosmic"
+				count: 16
+			}]
+		}
+		{
+			x: 1.5d
+			y: -1.5d
+			subtitle: "反物質加工で量産できますよ"
+			dependencies: ["1A7E4A72F5505033"]
+			id: "2EB8845B6061DEBB"
+			tasks: [{
+				id: "26F6532ECE5C14D3"
+				type: "item"
+				item: "megacells:cell_component_256m"
+			}]
+			rewards: [{
+				id: "51A190969046549A"
+				type: "item"
+				item: "megacells:cell_component_256m"
+				count: 256
+			}]
+		}
+		{
+			x: 0.0d
+			y: 1.5d
+			subtitle: "※仕様です"
+			dependencies: ["1A7C97BB24091DDF"]
+			id: "0787249FD9F3D078"
+			tasks: [{
+				id: "22DFA36A96DD535F"
+				type: "item"
+				item: "mek1000:the_null"
+			}]
+			rewards: [{
+				id: "5A6C01AB9A6B5C5B"
+				type: "item"
+				item: "mek1000:the_null"
+				count: 12
+			}]
+		}
+		{
+			x: -3.0d
+			y: 1.5d
+			dependencies: [
+				"0787249FD9F3D078"
+				"38906A60A646405A"
+			]
+			id: "671548989598D46F"
+			tasks: [{
+				id: "61159E41D99979B7"
+				type: "item"
+				item: "mek1000:singurarity_generator"
+			}]
+			rewards: [{
+				id: "1A1BDF933967E01A"
+				type: "item"
+				item: "mek1000:perfect_gas_input"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 4.5d
+			dependencies: ["0787249FD9F3D078"]
+			id: "1BA1DEB047EE0DAB"
+			tasks: [{
+				id: "62E477364B7BA94C"
+				type: "item"
+				item: "mek1000:fusion_controller"
+			}]
+			rewards: [{
+				id: "5906DB4648B2DD41"
+				type: "item"
+				item: "mek1000:fusion_casing"
+				count: 32
+			}]
+		}
+		{
+			x: -4.5d
+			y: 2.5d
+			dependencies: ["671548989598D46F"]
+			id: "079075EB998746EC"
+			tasks: [{
+				id: "5868A6771E957BE7"
+				type: "item"
+				item: "mek1000:redstone_singularity"
+			}]
+		}
+		{
+			x: -3.5d
+			y: 2.5d
+			dependencies: ["671548989598D46F"]
+			id: "5CB32D86B4357B4A"
+			tasks: [{
+				id: "0511DF34E764A46A"
+				type: "item"
+				item: "mek1000:iron_singularity"
+			}]
+		}
+		{
+			x: -2.5d
+			y: 2.5d
+			dependencies: ["671548989598D46F"]
+			id: "5707195EB18AD2E4"
+			tasks: [{
+				id: "34E08AAA475CC346"
+				type: "item"
+				item: "mek1000:gold_singularity"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 2.5d
+			dependencies: ["671548989598D46F"]
+			id: "0A8501E17793E53D"
+			tasks: [{
+				id: "470433A5B00AA60A"
+				type: "item"
+				item: "mek1000:diamond_singularity"
+			}]
+		}
+		{
+			x: -4.5d
+			y: 3.5d
+			dependencies: ["671548989598D46F"]
+			id: "3F9A6A13ECD3BF87"
+			tasks: [{
+				id: "07DFA5AACF73C8C4"
+				type: "item"
+				item: "mek1000:lapis_singularity"
+			}]
+		}
+		{
+			x: -3.5d
+			y: 3.5d
+			dependencies: ["671548989598D46F"]
+			id: "651ACBBFFAC1BC66"
+			tasks: [{
+				id: "5B48E58C99153460"
+				type: "item"
+				item: "mek1000:emerald_singularity"
+			}]
+		}
+		{
+			x: -2.5d
+			y: 3.5d
+			dependencies: ["671548989598D46F"]
+			id: "6B38C1D926406A80"
+			tasks: [{
+				id: "637408B784D685DA"
+				type: "item"
+				item: "mek1000:copper_singularity"
+			}]
+		}
+		{
+			x: -5.5d
+			y: 2.5d
+			dependencies: [
+				"671548989598D46F"
+				"028FED5505F0A784"
+			]
+			id: "6F7E050661F155BC"
+			tasks: [{
+				id: "5E33C5CA7393B72C"
+				type: "item"
+				item: "mek1000:amethyst_singularity"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 3.5d
+			dependencies: ["671548989598D46F"]
+			id: "5820F2B59D2A4BA2"
+			tasks: [{
+				id: "5938613706AEC076"
+				type: "item"
+				item: "mek1000:coal_singularity"
+			}]
+		}
+		{
+			x: -4.5d
+			y: 4.5d
+			dependencies: ["671548989598D46F"]
+			id: "6B5675ED709AD738"
+			tasks: [{
+				id: "669021355B6B4287"
+				type: "item"
+				item: "mek1000:tin_singularity"
+			}]
+		}
+		{
+			x: 0.0d
+			y: -1.5d
+			subtitle: "※テクスチャは未設定です"
+			dependencies: ["3C2B7DDEFCAED95E"]
+			id: "4A967F974BC3A5C3"
+			tasks: [
+				{
+					id: "27940E39AF3B7F32"
+					type: "item"
+					item: "mek1000:energy_cataryst"
+				}
+				{
+					id: "2BF062403384852E"
+					type: "item"
+					item: "mek1000:item_cataryst"
+				}
+				{
+					id: "2EFA782E034CC96F"
+					type: "item"
+					item: "mek1000:fluid_cataryst"
+				}
+				{
+					id: "562ADD2D3A096944"
+					type: "item"
+					item: "mek1000:gas_cataryst"
+				}
+			]
+			rewards: [
+				{
+					id: "286E2CB33943958E"
+					type: "item"
+					item: "mek1000:energy_cataryst"
+					count: 31
+				}
+				{
+					id: "495B58E5E7148C2D"
+					type: "item"
+					item: "mek1000:item_cataryst"
+					count: 31
+				}
+				{
+					id: "2E2E00AD8F72BC07"
+					type: "item"
+					item: "mek1000:fluid_cataryst"
+					count: 31
+				}
+				{
+					id: "173C617A9ED65D27"
+					type: "item"
+					item: "mek1000:gas_cataryst"
+					count: 31
+				}
+			]
+		}
+		{
+			x: -3.5d
+			y: 4.5d
+			dependencies: ["671548989598D46F"]
+			id: "583AAB1BDB9502F4"
+			tasks: [{
+				id: "107B710A82328F5B"
+				type: "item"
+				item: "mek1000:quartz_singularity"
+			}]
+		}
+		{
+			x: -2.5d
+			y: 4.5d
+			dependencies: ["671548989598D46F"]
+			id: "2047C8F70EED06B3"
+			tasks: [{
+				id: "1DDFED9F32B2241A"
+				type: "item"
+				item: "mek1000:iridium_singularity"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 4.5d
+			dependencies: ["671548989598D46F"]
+			id: "7AEF6EB5D7B2671D"
+			tasks: [{
+				id: "7B62998A93DA0CF6"
+				type: "item"
+				item: "mek1000:certusquartz_singularity"
+			}]
+		}
+		{
+			x: -4.5d
+			y: 5.5d
+			dependencies: ["671548989598D46F"]
+			id: "58159961F6856D02"
+			tasks: [{
+				id: "6BB3D62F9E3BB36A"
+				type: "item"
+				item: "mek1000:fluorite_singularity"
+			}]
+		}
+		{
+			x: -3.5d
+			y: 5.5d
+			dependencies: ["671548989598D46F"]
+			id: "0D3CE78ED6906B8F"
+			tasks: [{
+				id: "24F6939746C5CDAB"
+				type: "item"
+				item: "mek1000:lead_singularity"
+			}]
+		}
+		{
+			x: -2.5d
+			y: 5.5d
+			dependencies: ["671548989598D46F"]
+			id: "6359911B962D7263"
+			tasks: [{
+				id: "3C08DFEB4A8642CD"
+				type: "item"
+				item: "mek1000:uranium_singularity"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 5.5d
+			dependencies: ["671548989598D46F"]
+			id: "3603D5E068D11F73"
+			tasks: [{
+				id: "08C1882E517E396E"
+				type: "item"
+				item: "mek1000:osmium_singularity"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 7.0d
+			dependencies: [
+				"1BA1DEB047EE0DAB"
+				"6F7E050661F155BC"
+				"7AEF6EB5D7B2671D"
+				"5820F2B59D2A4BA2"
+				"6B38C1D926406A80"
+				"0A8501E17793E53D"
+				"651ACBBFFAC1BC66"
+				"58159961F6856D02"
+				"5707195EB18AD2E4"
+				"2047C8F70EED06B3"
+				"5CB32D86B4357B4A"
+				"3F9A6A13ECD3BF87"
+				"0D3CE78ED6906B8F"
+				"3603D5E068D11F73"
+				"583AAB1BDB9502F4"
+				"079075EB998746EC"
+				"6B5675ED709AD738"
+				"6359911B962D7263"
+			]
+			id: "46084A8C9AA19F87"
+			tasks: [{
+				id: "129342F445496642"
+				type: "item"
+				item: "mek1000:eternal_singularity"
+			}]
+			rewards: [{
+				id: "4989F3CA4346A24D"
+				type: "item"
+				item: "mek1000:eternal_singularity"
+				count: 3
+			}]
+		}
+		{
+			x: -5.5d
+			y: 1.5d
+			subtitle: "ある不思議な猫を召喚するための素材"
+			description: [""]
+			dependencies: ["4779A33B0230C6A1"]
+			id: "028FED5505F0A784"
+			tasks: [{
+				id: "47D4FE1377949B15"
+				type: "item"
+				item: "mek1000:tiny_antimatter"
+			}]
+		}
+		{
+			x: -5.5d
+			y: 0.0d
+			subtitle: "にゅーくれ〇っぷ!!"
+			dependencies: ["328FC63039D07A3D"]
+			id: "4779A33B0230C6A1"
+			tasks: [{
+				id: "6257E95F11DA9994"
+				type: "item"
+				item: "mek1000:ldpe"
+			}]
+		}
+	]
+	quest_links: [ ]
+}
