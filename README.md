@@ -1,2 +1,2 @@
-# 1000x-mekanism
+# Extraordinary Energy
 A modpack with extremely modified Mekanism
